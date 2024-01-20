@@ -1,0 +1,228 @@
+//Font specifications
+
+//Titles
+@mixin OhMyFood__title
+    font-family: Shrikhand
+    font-style: italic
+    font-weight: 400
+    letter-spacing: 0em
+    text-align: center
+    color:#101010
+    top:30px
+    margin:0px
+
+@mixin footer_title 
+    @include OhMyFood__title
+    font-size:18px 
+    color:#FFF
+
+//Web general font-family
+@mixin general_text
+    font-family: Roboto
+    font-weight: 700
+    font-size:15px
+    letter-spacing: 0em
+    color:#101010
+    margin:0px
+
+
+//Flexboxes
+@mixin display_flex
+    display: -webkit-box
+    display: -moz-box
+    display: -webkit-flexbox
+    display: -ms-flexbox
+    display: -webkit-flex
+    display: flex
+
+@mixin flex_column
+    @include display_flex
+    -webkit-box-orient: vertical
+    -moz-box-orient: vertical
+    -webkit-flex-direction: column
+    -moz-flex-direction: column
+    -ms-flex-direction: column
+    flex-direction: column
+
+@mixin flex_row
+    @include display_flex
+    -webkit-box-orient: horizontal
+    -moz-box-orient: horizontal
+    -webkit-flex-direction: row
+    -moz-flex-direction: row
+    -ms-flex-direction: row
+    flex-direction: row
+
+@mixin justify_content_center_column
+    @include flex_column
+    -webkit-box-pack: center
+    -moz-box-pack: center
+    -webkit-flex-pack: center
+    -ms-flex-pack: center
+    -moz-justify-content: center
+    -webkit-justify-content: center
+    justify-content: center
+
+@mixin justify_content_center_row
+    @include flex_row
+    -webkit-box-pack: center
+    -moz-box-pack: center
+    -webkit-flex-pack: center
+    -ms-flex-pack: center
+    -moz-justify-content: center
+    -webkit-justify-content: center
+    justify-content: center
+
+.main_container
+    @include flex_column
+    width: 375px
+    height: 2252px
+    top: 1362px
+    left: -1224px
+    background-color: #F6F6F6
+
+.nav__container
+    @include justify_content_center_column
+    width: 375px
+    height: 113px
+    padding: 0px, 0px, 0.5px, 0px
+    h2
+        @include OhMyFood__title
+        Width: 375px
+        Height: 63px
+        background-color:#FFFFFF
+        box-shadow: 0px 2px 4px 0px #00000026
+        text-align:center
+    .location
+        @include justify_content_center_row
+        width: 375px
+        height: 50px
+        top: 62.5px
+        left: -0.5px
+        gap: 17px
+        background-color: #EAEAEA
+        box-shadow: 0px 4px 4px 0px #00000040
+        .location i 
+            width: 12px
+            height: 16px
+        h4
+            @include general_text
+            width: 109px
+            height: 19px
+            font-size: 16px
+            font-weight: 500
+            line-height: 18,75px
+            text-align:center
+
+
+
+.reservation
+    @include justify_content_center_column
+    Width: 375px
+    height:287px
+    background-color:#F6F6F6
+    text-align:center
+    h3
+        @include general_text
+        font-size:24px
+        Line-height:28,13px
+        text-align:center
+        width: 275px
+        height: 68px
+        padding:39px 58px 0px 42px 
+    h6
+        @include general_text
+        font-weight:300
+        font-size:18px
+        Line-height:21,09px
+        text-align:center
+        padding:0px 26px 0px 34px 
+    button
+        width: 218px
+        height: 50px
+        top: 293px
+        left: 82px
+        border-radius:25px
+        @include general_text
+        font-weight:500
+        font-size:16px
+        Line-height:18,75px
+        color:#FFFFFF
+        box-shadow: 0px 4px 10px 0px #00000040
+        margin: 48px 27px 75px 82px
+
+    
+
+.how_it_works
+    @include flex_column
+    width: 375px
+    height: 440px
+    top: 400px
+    background-color: #FFFFFF
+    h3
+        @include general_text
+        font-size:24px
+        Line-height:28,13px
+    .procedure__text
+        @include flex_row
+        width: 335px
+        height: 72.38px
+        top: 505px
+        left: 20px
+        border-radius: 20px
+        background: #F6F6F6
+        box-shadow: 0px 4px 15px 0px #00000026
+        h4
+            @include general_text
+            font-weight:500
+            font-size:16px
+            Line-height:18,75px
+
+.restaurants
+    @include flex_column
+    Width: 375px
+    h3
+        @include general_text
+        font-size:24px
+        Line-height:28,13px
+    .resto_pack
+        @include flex_column
+        .card_rest
+            @include flex-column
+            h3
+                @include general_text
+                font-Weight:700
+                font-Size:18px
+                Line-height:21.09px
+            h6
+                @include general_text
+                font-Weight:300
+                font-Size:17px
+                Line-height:19,92px
+    
+.photorestaurant
+    width: 289px
+    height: 228px
+    border-radius:15px 15px 0px 0px
+
+footer
+    background-color:#353535
+    width:375px
+    height:186px
+    .ft
+        @include flex_column
+        h2
+            @include footer_title
+            color:#FFF
+        h4
+            @include general_text
+            font-Weight:500
+            font-Size:16px
+            Line-height:18,75px
+            color:#FFF
+        h5
+            @include general_text
+            font-Weight:400
+            font-Size:16px
+            Line-height:18,75px
+            color:#FFF
