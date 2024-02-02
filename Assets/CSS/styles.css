@@ -8,7 +8,7 @@
   flex-direction: row;
 }
 
-.fa-circle, .fa-store {
+.fa-store {
   width: 24px;
   height: 24px;
   left: 20px;
@@ -20,27 +20,22 @@
   color: #7E7E7E;
 }
 
-.fa-store {
-  color: #9356DC;
-}
-
 body {
   width: 100%;
-  margin: 0px;
 }
 
 .main_container {
   width: 100%;
   height: 2252px;
-  top: 1362px;
-  left: -1224px;
-  background-color: #F6F6F6;
+  align-items: center;
+  padding: 0px;
+  left: 0px;
+  right: 0px;
 }
 
 .nav__container {
   width: 100%;
   height: 113px;
-  padding: 0px, 0px, 0.5px, 0px;
 }
 .nav__container h1 {
   font-family: Shrikhand;
@@ -52,7 +47,6 @@ body {
   color: #101010;
   top: 30px;
   margin: 0px;
-  width: 100%;
   height: 63px;
   background-color: #FFFFFF;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1490196078);
@@ -60,7 +54,6 @@ body {
   align-items: center;
 }
 .nav__container .location {
-  width: 100%;
   height: 50px;
   top: 62.5px;
   left: -0.5px;
@@ -82,10 +75,10 @@ body {
   letter-spacing: 0em;
   color: #101010;
   margin: 0px;
+  font-weight: 500;
+  font-size: 16px;
   width: 109px;
   height: 19px;
-  font-size: 16px;
-  font-weight: 500;
   line-height: 18.75px;
   color: #353535;
 }
@@ -126,31 +119,26 @@ body {
   text-align: center;
   margin: 0px 26px 0px 34px;
 }
-.reservation button {
+.reservation .button__homepage {
   width: 218px;
   height: 50px;
   top: 293px;
   left: 82px;
   border-radius: 25px;
-  background: #000;
   font-weight: 500;
   font-size: 16px;
   Line-height: 18.75px;
   color: #FFFFFF;
   text-align: center;
-  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
   margin: 27px 75px 57px 82px;
-  background: var(--Button-Gradient, linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%));
-}
-.reservation button::hover {
-  background: var(--Button-Gradient, linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%));
+  background-color: var(--Button-Gradient, linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%));
 }
 
 .how_it_works {
   width: 100%;
   height: 440px;
   background-color: #FFF;
-  margin: 0px 20px 0px 20px;
+  padding: 0px 20px 0px 20px;
   gap: 26px;
 }
 .how_it_works h2 {
@@ -166,50 +154,62 @@ body {
   margin-top: 48px;
 }
 .how_it_works .procedure-box {
-  width: 335px;
+  position: relative;
+  color: #F00;
+  width: 100%;
   height: 72.38px;
   border-radius: 20px;
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: #F00;
-  top: 505px;
-  right: 20px;
-  border-radius: 20px;
-  background: #F6F6F6;
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1490196078);
+  color: #F6F6F6;
   gap: 27px;
   align-items: center;
 }
 .how_it_works .procedure-box .step {
+  position: absolute;
+  align-items: left;
   font-family: Roboto;
   font-weight: 700;
   font-size: 15px;
   letter-spacing: 0em;
   color: #101010;
   margin: 0px;
-  font-size: 14.18px;
   font-weight: 500;
+  font-size: 16px;
+  font-size: 14.18px;
   line-height: 16.62px;
   color: #FFF;
   display: inline-block;
   padding-top: 3px;
   border-radius: 24px;
   width: 24px;
-  height: 18px;
+  height: 21px;
   border-color: #9356DC;
   background-color: #9356DC;
-  margin-top: 24px;
   text-align: center;
 }
-.how_it_works .procedure-box p {
+.how_it_works .procedure-box .clipped-box {
+  margin: 0px 40px 0px 12px;
+  padding-left: 30px;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1490196078);
+  top: 505px;
+  border-radius: 20px;
+  background: #F6F6F6;
+  background-clip: padding-box;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  gap: 40px;
+  left: 65px;
+  justify-content: evenly;
+}
+.how_it_works .procedure-box .clipped-box p {
   font-family: Roboto;
   font-weight: 700;
   font-size: 15px;
   letter-spacing: 0em;
   color: #101010;
   margin: 0px;
-  font-size: 16px;
   font-weight: 500;
+  font-size: 16px;
   line-height: 19px;
   letter-spacing: 0em;
   text-align: left;
@@ -244,7 +244,7 @@ body {
 .restaurants .resto_pack .card_rest a {
   text-decoration: none;
 }
-.restaurants .resto_pack .card_rest .newbie_restaurant {
+.restaurants .resto_pack .card_rest .newbie_box {
   /* Rectangle: size, shadows, colour and location */
   width: 80px;
   height: 29px;
@@ -254,7 +254,8 @@ body {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
   border-radius: 2px;
   position: absolute;
-  /* Text inside the rectangle */
+}
+.restaurants .resto_pack .card_rest .newbie_box newbie_text {
   width: 61.37px;
   height: 16px;
   /*right: 9.63px*/
@@ -265,6 +266,7 @@ body {
   color: #101010;
   margin: 0px;
   font-weight: 500;
+  font-size: 16px;
   font-size: 14px;
   line-height: 16px;
   text-align: center;
@@ -291,7 +293,6 @@ body {
   letter-spacing: 0em;
   color: #101010;
   margin: 0px;
-  font-weight: 700;
   font-Size: 18px;
   Line-height: 21.09px;
 }
@@ -309,8 +310,7 @@ body {
 .restaurants .resto_pack .card_rest .restaurant_frame a {
   text-decoration: none;
 }
-
-.photorestaurant {
+.restaurants .photorestaurant {
   width: 100%;
   height: 174px;
   border-radius: 15px 15px 0px 0px;
@@ -319,7 +319,7 @@ body {
 
 footer {
   background-color: #353535;
-  width: 375px;
+  width: 100%;
   height: 186px;
 }
 footer .ft {
@@ -366,8 +366,8 @@ footer .ft .ft_menu .icon_plus_text p {
   letter-spacing: 0em;
   color: #101010;
   margin: 0px;
-  font-Weight: 500;
-  font-Size: 16px;
+  font-weight: 500;
+  font-size: 16px;
   Line-height: 18, 75px;
   width: 168px;
   height: 19px;
@@ -382,8 +382,9 @@ footer .ft .ft_menu p {
   letter-spacing: 0em;
   color: #101010;
   margin: 0px;
-  font-Weight: 400;
-  font-Size: 16px;
+  font-weight: 500;
+  font-size: 16px;
+  font-weight: 400;
   Line-height: 18, 75px;
   color: #FFFFFF;
 }/*# sourceMappingURL=styles.css.map */
