@@ -7,13 +7,17 @@
   flex-direction: row
 
 //Colours & shadows
-$button_primary: #9356DC 100%
-$button_secondary: #FF79DA 100%
-$button_tertiary: rgba(255, 255, 255, 0.15)
-$button_lineargradient_default: linear-gradient (193.33deg, $button_primary, $button_secondary)
-$button_lineargradient_hover: linear-gradient (100.32deg $button_lineargradient_hover_1, $button_lineargradient_hover_2)
-$button_lineargradient_hover_1: linear-gradient (200.64deg, #9356DC -5.2%, #FF79DA 110.74%)
-$button_lineargradient_hover_2: linear-gradient (0deg, $button_tertiary)
+$button_primary: #9356dc 100%
+$button_secondary: #ff79da 100%
+$button_tertiary: #fff 15%
+$button_primary_default: #9356dc -11.44%
+$button_primary_hover: #9356dc -5.2%
+$button_secondary_default: #ff79da 123.93%
+$button_secondary_hover: #ff79da 110.74%
+$button_default: linear-gradient(193.33deg, $button_primary_default, $button_secondary_default)
+$button_hover: linear-gradient(200.64deg, #f00, #00f)
+//$button_hover: linear-gradient(0deg, $button_hover_color)
+
 
 //Icons
 .fa-store
@@ -45,8 +49,16 @@ $button_lineargradient_hover_2: linear-gradient (0deg, $button_tertiary)
     text-align: left
 
 //Web general font-family
-@mixin roboto_700
+
+@mixin roboto_fam
     font-family: Roboto
+    font-size: 15px
+    letter-spacing: 0em
+    color: #101010
+    margin: 0px
+
+@mixin roboto_700
+    @include roboto_fam
     font-weight: 700
     font-size: 15px
     letter-spacing: 0em
@@ -54,16 +66,23 @@ $button_lineargradient_hover_2: linear-gradient (0deg, $button_tertiary)
     margin: 0px
 
 @mixin roboto_500
-    @include roboto_700
+    @include roboto_fam
     font-weight: 500
     font-size: 16px
+    letter-spacing: 0em
+    color: #101010
+    margin: 0px
 
 @mixin roboto_400
-    @include roboto_500
+    @include roboto_fam
     font-weight: 400
+    font-size: 16px
+    letter-spacing: 0em
+    color: #101010
+    margin: 0px
 
 @mixin roboto_300
-    @include roboto_700
+    @include roboto_fam
     font-weight: 300
 
 body
@@ -100,12 +119,17 @@ body
             width: 12px
             height: 16px
             color: #353535
-        p
-            @include roboto_500
+        .location_city
             width: 109px
             height: 19px
             line-height: 18.75px
-            color: #353535
+            border: none
+            background-color: #EAEAEA
+            ::placeholder
+                @include roboto_500
+                opacity:1
+                border: none
+                color: #353535 solid
 
 .reservation
     width: 100%
@@ -129,7 +153,14 @@ body
         Line-height: 21.09px                
         text-align: center
         margin: 0px 26px 0px 34px
+    .button_homepage_default               
+        background:$button_default
+        box-shadow: 0px 4px 10px 0px #00000040
+    .button_homepage_hover
+        background: $button_hover
+        box-shadow: 0px 4px 15px 0px #00000059
     .button__homepage
+        justify-content:center
         width: 218px
         height: 50px
         top: 293px
@@ -141,7 +172,19 @@ body
         color: #FFFFFF
         text-align: center
         margin: 27px 75px 57px 82px
-        background-color: $button_lineargradient_default
+        //.button_homepage_default
+          //  display:inline
+        //.button_homepage_hover
+          //  display:none
+        //.button__homepage:hover 
+          //  .button_homepage_default
+            //    display:none
+            //.button_homepage_hover                
+              //  display:inline
+
+    
+
+
 
 .how_it_works
     width: 100%
@@ -218,27 +261,32 @@ body
             border-radius: 15px
             background: #FFFFFF
             box-shadow: 0px 4px 15px 0px #0000001A
-            a 
-                text-decoration: none
             .newbie_box
-                /* Rectangle: size, shadows, colour and location */
                 width: 80px
                 height: 29px
-                right: 14.5px
-                top: calc(50% - 29px/16)
-                background: #99E2D0
-                box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15)
                 border-radius: 2px
-                position: absolute
-                newbie_text /* Text inside the rectangle */
+                background-color: #99e2d0 100%
+                box-shadow: 0px 2px 4px 0px #00000026
+                position: relative
+                top: 10px
+                left: 85%
+                border: #99E2D0
+                p
                     width: 61.37px
                     height: 16px
-                    /*right: 9.63px*/
+                    top: 7px
+                    left: 9px
                     @include roboto_500
                     font-size: 14px
                     line-height: 16px
                     text-align: center
                     color: #008766
+                    position: absolute
+                    background: #99e2d0
+                    padding: 6.5px
+                    border-radius: 2px
+            a 
+                text-decoration: none
             .restaurant_frame
                 height: 77px
                 align-items: center
@@ -272,7 +320,7 @@ footer
     height: 186px
     .ft
         padding: 22px 25px
-        color #FFFFFF
+        color: #FFFFFF
         a
             text-decoration: none
             color: #FFF
