@@ -22,15 +22,17 @@
 
 body {
   width: 100%;
+  margin: 0px;
 }
 
 .main_container {
-  width: 100%;
   height: 2252px;
   align-items: center;
   padding: 0px;
+  margin: 0px;
   left: 0px;
   right: 0px;
+  box-sizing: border-box;
 }
 
 .nav__container {
@@ -70,12 +72,12 @@ body {
 }
 .nav__container .location .location_city {
   color: #000;
-  opacity: 1;
   width: 109px;
   height: 19px;
   line-height: 18.75px;
   border: none;
   background-color: #EAEAEA;
+  opacity: 1;
 }
 .nav__container .location .location_city ::placeholder {
   font-family: Roboto;
@@ -84,9 +86,10 @@ body {
   margin: 0px;
   font-weight: 500;
   font-size: 16px;
-  border-color: #EAEAEA;
-  color: #F00;
-  background-color: #000;
+  border: solid 1px #EAEAEA;
+  color: #000;
+  background-color: #EAEAEA;
+  opacity: 1;
 }
 
 .reservation {
@@ -139,12 +142,14 @@ body {
   text-align: center;
   margin: 27px 75px 57px 82px;
   background-color: linear-gradient(193.33deg, #9356DC, #FF79DA);
+  opacity: 1;
 }
 .how_it_works {
   width: 100%;
   height: 440px;
+  top: 400px;
   background-color: #FFF;
-  padding: 0px 20px 0px 20px;
+  padding-left: 20px;
   gap: 26px;
 }
 .how_it_works h2 {
@@ -161,7 +166,6 @@ body {
 .how_it_works .procedure-box {
   position: relative;
   color: #F00;
-  width: 100%;
   height: 72.38px;
   border-radius: 20px;
   color: #F6F6F6;
@@ -188,9 +192,9 @@ body {
   border-color: #9356DC;
   background-color: #9356DC;
   text-align: center;
+  left: -12px;
 }
 .how_it_works .procedure-box .clipped-box {
-  margin: 0px 40px 0px 12px;
   padding-left: 30px;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1490196078);
   top: 505px;
@@ -199,7 +203,8 @@ body {
   background-clip: padding-box;
   align-items: center;
   height: 100%;
-  width: 100%;
+  width: 89%;
+  right: 20px;
   gap: 40px;
   left: 65px;
   justify-content: evenly;
