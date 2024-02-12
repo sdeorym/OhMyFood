@@ -293,10 +293,34 @@ body {
   padding: 20px;
   justify-content: space-between;
 }
-.restaurants .resto_pack .card_rest .restaurant_frame .fa-heart {
-  width: 22px;
-  height: 22px;
-  color: #000;
+.restaurants .resto_pack .card_rest .restaurant_frame .hearts {
+  width: 25px;
+  height: 25px;
+  border: 0px #FFF;
+  background: #FFF;
+}
+.restaurants .resto_pack .card_rest .restaurant_frame .hearts .control-me::after {
+  content: url("../images/icons/empty_like.svg");
+}
+.restaurants .resto_pack .card_rest .restaurant_frame .hearts #toggle1:checked ~ .control-me::after {
+  content: url("../images/icons/full_like.svg");
+}
+.restaurants .resto_pack .card_rest .restaurant_frame .hearts #toggle2:checked ~ .control-me::after {
+  content: url("../images/icons/full_like.svg");
+}
+.restaurants .resto_pack .card_rest .restaurant_frame .hearts #toggle3:checked ~ .control-me::after {
+  content: url("../images/icons/full_like.svg");
+}
+.restaurants .resto_pack .card_rest .restaurant_frame .hearts #toggle4:checked ~ .control-me::after {
+  content: url("../images/icons/full_like.svg");
+}
+.restaurants .resto_pack .card_rest .restaurant_frame .hearts label {
+  padding: 0px;
+}
+.restaurants .resto_pack .card_rest .restaurant_frame .hearts .visually-hidden {
+  position: absolute;
+  left: -100vw;
+  opacity: 0;
 }
 .restaurants .resto_pack .card_rest .restaurant_frame .restaurant-data {
   gap: 7.5px;

@@ -6,12 +6,14 @@
   display: flex
   flex-direction: row
 
+//.reverserows
+//    display: flex
+//    flex-direction: row-reverse  
+
 //Colours
 $purple: #9356DC 100%
 $pink: #FF79DA 100%
 $whitey: #FFFFFF 15%
-
-
 
 //Icons
 .fa-store
@@ -24,6 +26,7 @@ $whitey: #FFFFFF 15%
 .fa-mobile-screen-button, .fa-list-ul
     color: #7E7E7E
 
+//WEBPAGE FONTS
 //Titles
 @mixin OhMyFood__title
     font-family: Shrikhand
@@ -43,7 +46,6 @@ $whitey: #FFFFFF 15%
     text-align: left
 
 //Web general font-family
-
 @mixin roboto_fam
     font-family: Roboto
     font-size: 15px
@@ -68,6 +70,20 @@ $whitey: #FFFFFF 15%
     @include roboto_fam
     font-weight: 300
 
+//Heart choose (restaurant choice)
+@mixin heart_default
+    .purple_heart_empty
+        display: inline
+    .purple_heart_full
+        display: none
+
+@mixin heart_chosen
+    .purple_heart_empty
+        display: none
+    .purple_heart_full
+        display: inline
+
+// Here starts the web
 body
     width: 100%
     margin: 0px
@@ -159,7 +175,6 @@ body
         &:hover 
             box-shadow: 0px 4px 15px 0px #00000059
             background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%)
-
 
 .how_it_works
     width: 100%
@@ -273,10 +288,27 @@ body
                 align-items: center
                 padding: 20px
                 justify-content: space-between
-                .fa-heart
-                    width: 22px
-                    height: 22px
-                    color:#000
+                .hearts
+                    width: 25px
+                    height: 25px
+                    border: 0px #FFF
+                    background: #FFF
+                    .control-me::after 
+                        content: url("../images/icons/empty_like.svg")
+                    #toggle1:checked ~ .control-me::after 
+                        content: url("../images/icons/full_like.svg")
+                    #toggle2:checked ~ .control-me::after 
+                        content: url("../images/icons/full_like.svg")
+                    #toggle3:checked ~ .control-me::after 
+                        content: url("../images/icons/full_like.svg")
+                    #toggle4:checked ~ .control-me::after 
+                        content: url("../images/icons/full_like.svg")
+                    label 
+                        padding: 0px
+                    .visually-hidden 
+                        position: absolute
+                        left: -100vw
+                        opacity: 0
 
                 .restaurant-data
                     gap: 7.5px
