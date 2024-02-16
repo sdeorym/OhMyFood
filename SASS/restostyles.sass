@@ -1,0 +1,200 @@
+.columns 
+  display: flex
+  flex-direction: column
+
+.rows 
+  display: flex
+  flex-direction: row
+
+//WEBPAGE FONTS
+//Titles
+@mixin OhMyFood__title
+    font-family: Shrikhand
+    font-size: 30px
+    font-style: italic
+    font-weight: 400
+    letter-spacing: 0em
+    text-align: center
+    color: #101010
+    top: 30px
+    margin: 0px
+
+@mixin restaurant__title
+    @include OhMyFood__title
+    font-size: 28px
+
+@mixin footer_title 
+    @include OhMyFood__title
+    font-size:18px 
+    color:#FFF
+    text-align: left
+
+//Web general font-family
+@mixin roboto_fam
+    font-family: Roboto
+    font-size: 15px
+    letter-spacing: 0em
+    margin: 0px
+
+@mixin roboto_700
+    @include roboto_fam
+    font-weight: 700
+
+@mixin roboto_500
+    @include roboto_fam
+    font-weight: 500
+    font-size: 16px
+
+@mixin roboto_400
+    @include roboto_fam
+    font-weight: 400
+    font-size: 16px
+
+@mixin roboto_300
+    @include roboto_fam
+    font-weight: 300
+
+body
+    width: 100%
+    height: 1590px
+    top: 1362px
+    left: -790px
+
+.rest__nav
+    width: 100%
+    height: 63px
+    padding: 14px, 89px, 13px, 17px
+    gap: 10px
+    background: #FFFFFF
+    box-shadow: 0px 2px 4px 0px #00000026
+    a 
+        text-decoration: none
+        color: #101010
+    .left_arrow
+        width: 22px
+        height: 21px
+        top: 8px
+        left: 312px
+    h1
+        @include OhMyFood__title
+        width: 162px
+        height: 44px
+        left: 16px
+        text-align: center
+
+.photorestaurantpage
+    width: 100%
+    height: 275px
+    top: 63px
+    object-fit: cover
+
+.corpus
+    width: 100%
+    height: 1121px
+    top: 283px
+    background: #F6F6F6
+    border-top-right-radius: 32px
+    border-top-left-radius: 32px
+    .rest_bar
+        justify-content: center
+        h2
+            @include restaurant__title
+    .menu
+        width: 93%
+        height: 270px
+        gap: 12px
+        align-content: center
+        .menu_part
+            h3
+                @include roboto_300
+                font-size: 16px
+                color: #000
+                bottom: 27px
+            border-bottom: 3px solid #99E2D0
+        .dish
+            width: 100%
+            height: 69px
+            border-radius: 15.04px
+            background: #FFF
+            box-shadow: 0px 4.011494159698486px 15.043103218078613px 0px #0000001A
+            .dish-name
+                justify-content: space-around
+                align-content: left
+                .dish-title
+                    @include roboto_500
+                    font-size: 18px
+                .dish-description
+                    @include roboto_300
+                    font-size: 15.04px
+            .dish-price
+                @include roboto_700
+                font-size: 15.04px
+                justify-content: flex-end
+                align-content: flex-end
+    .button__commande
+        @include roboto_500
+        font-size: 16px        
+        justify-content:center
+        width: 186px
+        height: 50px
+        top: 50px
+        border-radius: 25px
+        Line-height: 18.75px
+        color: #FFFFFF
+        text-align: center
+        margin: 27px 75px 57px 82px
+        box-shadow: 0px 4px 10px 0px #00000040
+        background: linear-gradient(193.33deg, #9356DC 11.44%, #FF79DA 123.93%)
+        &:hover 
+            box-shadow: 0px 4px 15px 0px #00000059
+            background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%)
+
+footer
+    background-color: #353535
+    width: 100%
+    height: 186px
+    .ft
+        padding: 22px 25px
+        color: #FFFFFF
+        a
+            text-decoration: none
+            color: #FFF
+        h2
+            @include footer_title
+            padding-bottom: 18px
+        .ft_menu
+            width: 190px
+            height: 99px
+            gap: 7px
+            text-align: left
+            .icon_plus_text
+                width: 190px
+                height: 19px
+                color: #FFFFFF
+                .ft_icon
+                    width: 25px
+                    align-items: left
+                p
+                    @include roboto_500
+                    Line-height:18,75px
+                    width: 168px
+                    height: 19px
+                    left: 22px
+                    text-align: left
+                    color: #FFFFFF
+            p
+                @include roboto_400
+                Line-height: 18,75px
+                color: #FFFFFF
+
+
+
+                
+            
+              
+
+
+
+
+
+
