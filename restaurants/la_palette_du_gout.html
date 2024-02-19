@@ -16,117 +16,136 @@
 <body>
     <div class="main-container columns">
         <header>
-            <nav class="rest__nav rows">
-                <a href="../index.html"><img src="../assets/images/icons/goback.svg" alt="Flèche vers la gauche" class="left_arrow"></a>
-                <h1>Ohmyfood</h1>
+            <nav>
+                <div class="rest__nav rows">
+                    <span class="arrow">
+                        <a href="../index.html">
+                            <img src="../assets/images/icons/goback.svg" alt="Flèche vers la gauche" class="left_arrow">
+                        </a>
+                    </span>
+                    <span class="title">
+                        <h1>Ohmyfood</h1>
+                    </span>
+                </div>
             </nav>
         </header>
 
         <img src="../assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Plat du resto 'La palette du goût'" class="photorestaurantpage">
 
         <section class="corpus columns">
-            <div class="rest_bar rows" id="palette">
+            <span class="rest_bar rows" id="palette">
                 <h2>La palette du goût</h2>
-                <!--<span class="hearts">
+                <span class="hearts">
                     <label for="toggle1">    
                         <input type="checkbox" id="toggle1" class="visually-hidden">
                         <div class="control-me"></div>
                     </label>
-                </span>-->
-            </div>
+                </span>
+            </span>
             <section class="menu columns">
                 <div class="menu_part">
                     <h3>ENTRÉES</h3>
                 </div>
-                <article class="dish rows">
+                <article class="dish">
                     <div class="dish-name columns">
-                        <p class="dish-title">Friccassée d'escargots</p>
-                        <p class="dish-description">Au piment d'Espelette</p>
+                        <p class="dish-title">Fricassée d'escargots</p>
+                        <p class="dishpecifications rows">
+                            <span class="dish-description ">Au piment d'Espelette</span>
+                            <span class="dish-price">25€</span>
+                        </p>
                     </div>
-                    <span class="dish-price">25€</span>
                 </article>
-                <article class="dish rows">
+                <article class="dish">
                     <div class="dish-name columns">
                         <p class="dish-title">Foie gras de canard mi-cuit</p>
-                        <p class="dish-description">Et ses copeaux de truffe noire</p>
-                    </div>
-                    <span class="dish-price">35€</span>
+                        <p class="dishpecifications rows">
+                            <span class="dish-description">Et ses copeaux de truffe noire</span>
+                            <span class="dish-price">35€</span>
+                        </p>
+                    </div>                    
                 </article>
-                <article class="dish rows">
+                <article class="dish">
                     <div class="dish-name columns">
                         <p class="dish-title">Œuf au plat</p>
-                        <p class="dish-description">Assaisonné à la truffe sur lit de caviar</p>
+                        <p class="dishpecifications rows"> 
+                            <span class="dish-description">Assaisonné à la truffe sur lit de caviar</span>                    
+                            <span class="dish-price">20€</span></p>
                     </div>
-                    <span class="dish-price">20€</span>
                 </article>
             </section>
             <section class="menu columns">
                 <div class="menu_part">
                     <h3>PLATS</h3>
                 </div>
-                <article class="dish rows">
+                <article class="dish">
                     <div class="dish-name columns">
                         <p class="dish-title">Filet aux herbes</p>
-                        <p class="dish-description">Accompagné de sa ribambelle de légumes</p>
+                        <p class="dishpecifications rows"> 
+                            <span class="dish-description">Accompagné de sa ribambelle de légumes</span>                    
+                            <span class="dish-price">20€</span></p>
                     </div>
-                    <span class="dish-price">40€</span>
                 </article>
-                <article class="dish rows">
+                <article class="dish">
                     <div class="dish-name columns">
                         <p class="dish-title">Parmentier de queue de bœuf</p>
-                        <p class="dish-description">À la truffe noir sur sa purée de panais</p>
+                        <p class="dishpecifications rows"> 
+                            <span class="dish-description">À la truffe noir sur sa purée de panais</span>                    
+                            <span class="dish-price">20€</span></p>
                     </div>
-                    <span class="dish-price">35€</span>
                 </article>
-                <article class="dish rows">
+                <article class="dish">
                     <div class="dish-name columns">
                         <p class="dish-title">Filet de turbot</p>
-                        <p class="dish-description">Aux agrumes</p>
+                        <p class="dishpecifications rows"> 
+                            <span class="dish-description">Aux agrumes</span>                    
+                            <span class="dish-price">44€</span></p>
                     </div>
-                    <span class="dish-price">44€</span>
                 </article>
             </section>
             <section class="menu columns">
                 <div class="menu_part">
                     <h3>DESSERTS</h3>
                 </div>
-                <article class="dish rows">
+                <article class="dish">
                     <div class="dish-name columns">
                         <p class="dish-title">Paris-Brest</p>
-                        <p class="dish-description">Revisité</p>
+                        <p class="dishpecifications rows"> 
+                            <span class="dish-description">Revisité</span>                    
+                            <span class="dish-price">18€</span></p>
                     </div>
-                    <span class="dish-price">18€</span>
                 </article>
-                <article class="dish rows">
+                <article class="dish">
                     <div class="dish-name columns">
                         <p class="dish-title">Macaron au chocolat d'exception</p>
-                        <p class="dish-description">Et glace à la vanille de Madagascar</p>
+                        <p class="dishpecifications rows"> 
+                            <span class="dish-description">Et glace à la vanille de Madagascar</span>                    
+                            <span class="dish-price">22€</span></p>
                     </div>
-                    <span class="dish-price">22€</span>
                 </article>
-                <article class="dish rows">
+                <article class="dish">
                     <div class="dish-name columns">
                         <p class="dish-title">Mousse au chocolat</p>
-                        <p class="dish-description">Au piment d'Espelette et à la truffe noir</p>
+                        <p class="dishpecifications rows"> 
+                            <span class="dish-description">Au piment d'Espelette et à la truffe noir</span>                    
+                            <span class="dish-price">23€</span></p>
                     </div>
-                    <span class="dish-price">23€</span>
                 </article>
             </section>
             <form method="get" action="#palette">
                 <button class="button__commande">Commander</button>
             </form>
-    </section>
-    <footer>
-        <div class="ft columns">
-            <h2>ohmyfood</h2>
-            <div class="ft_menu columns">
-                <p class="icon_plus_text rows"><span class="ft_icon"><a href="#"><i class="fa-solid fa-utensils"></i></a></span><a href="#">Proposer un restaurant</a></p>
-                <p class="icon_plus_text rows"><span class="ft_icon"><a href="#"><i class="fa-solid fa-handshake-angle"></i></a></span><a href="#">Devenir partenaire</a></p>
-                <p><a href="#">Mentions légales</a></p>
-                <p><a href="#">Contact</a></p>
+        </section>
+        <footer>
+            <div class="ft columns">
+                <h2>ohmyfood</h2>
+                <div class="ft_menu columns">
+                    <p class="icon_plus_text rows"><span class="ft_icon"><a href="#"><i class="fa-solid fa-utensils"></i></a></span><a href="#">Proposer un restaurant</a></p>
+                    <p class="icon_plus_text rows"><span class="ft_icon"><a href="#"><i class="fa-solid fa-handshake-angle"></i></a></span><a href="#">Devenir partenaire</a></p>
+                    <p><a href="#">Mentions légales</a></p>
+                    <p><a href="#">Contact</a></p>
+                </div>
             </div>
-        </div>
-    </footer>
+        </footer>
     </div>
 </body>
 
