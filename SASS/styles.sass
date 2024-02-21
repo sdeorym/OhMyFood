@@ -30,10 +30,7 @@ $whitey: #FFFFFF 15%
     font-style: italic
     font-weight: 400
     letter-spacing: 0em
-    text-align: center
     color: #101010
-    top: 30px
-    margin: 0px
 
 @mixin footer_title 
     @include OhMyFood__title
@@ -82,34 +79,36 @@ $whitey: #FFFFFF 15%
 // Here starts the web
 body
     width: 100%
+    height: 1362px
     margin: 0px
     @media only screen and (min-width: 907.5px)
         max-width: 1440px
         height: 1395px
+        gap: 30px
 
 .main_container
     width: 100%
-    height: 2252px
     align-items: center
-    padding: 0px
-    margin: 0px
-    left: 0px
-    right: 0px
     box-sizing: border-box
 
 nav
     width: 100%
     height: 113px
-    h1
-        @include OhMyFood__title
-        height: 63px
-        background-color:#FFFFFF
-        box-shadow: 0px 2px 4px 0px #00000026
+    @media only screen and (min-width: 907.5px)
+        height: 146px
+    .nav_title
         justify-content: center
-        align-items: center
-        @media only screen and (min-width: 907.5px)
-            height: 96px
-            top: 30px      
+        text-align: center
+        padding: 0px 19px 0px 16px
+        top: 14px
+        h1
+            @include OhMyFood__title
+            height: 63px
+            background-color:#FFFFFF
+            box-shadow: 0px 2px 4px 0px #00000026
+            margin: 0px
+            @media only screen and (min-width: 907.5px)
+                height: 96px
     .location
         height: 50px
         top: 62.5px
@@ -124,7 +123,7 @@ nav
             height: 16px
             color: #353535
         .location_city
-            color: #000
+            color: #353535
             width: 109px
             height: 19px
             line-height: 18.75px
@@ -133,17 +132,12 @@ nav
             opacity: 1
             ::placeholder
                 @include roboto_500
-                border: solid 1px #EAEAEA
-                color: #000
+                border: none
+                color: #353535
                 background-color: #EAEAEA
                 opacity: 1
-    @media (min-width: 907.5px)
-        height: 146px
-        h1
-            height: 96px
-            top: 30px
-        @media only screen and (min-width: 907.5px)
-            height: 50px     
+            @media only screen and (min-width: 907.5px)
+                height: 50px     
         
 .reservation
     width: 100%
@@ -154,26 +148,31 @@ nav
     align-items: center
     gap: 10px
     @media only screen and (min-width: 907.5px)
-        height: 239px
+        width: 100%
+        height: 179px
         padding: 30px
     h2
         @include roboto_700
         font-size: 24px
         Line-height: 28.13px        
-        width: 275px
+        width: 73.33%
         height: 68px
         text-align: center
-        margin: 39px 58px 0px 42px
+        padding: 39px 58px 0px 42px
         @media only screen and (min-width: 907.5px)
             font-size: 40px
             Line-height: 46.88px        
             width: 100%
             height: 68px
+            top: 176px
+            left: 397,5px
     h3
         @include roboto_300
         font-size: 18px
         Line-height: 21.09px                
         text-align: center
+        width: 84%
+        height: 46px
         margin: 0px 26px 0px 34px
     .button__homepage
         @include roboto_500        
@@ -192,6 +191,7 @@ nav
         &:hover 
             box-shadow: 0px 4px 15px 0px #00000059
             background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%)
+            border: none
 
 .how_it_works
     width: 100%
@@ -202,12 +202,19 @@ nav
     padding-left: 20px
     gap: 26px
     box-sizing: border-box
+    .procedure
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        width: 100%
+        height: 268px
+        gap: 25px    
     @media only screen and (min-width: 907.5px)
         height: 228.38px
         padding: 50px, 180px, 50px, 180px
         gap: 25px
         align-items: center
-        .desktop-row
+        .procedure
             display: flex
             flex-direction: row
             justify-content: space-between
@@ -282,11 +289,11 @@ nav
     width: 100%
     height: 1226px
     gap: 18px
+    background-color: #F6F6F6
     @media only screen and (min-width: 907.5px)
-        height: 608px
-        margin: 50px 0px 50px 0px
-        padding: 0px, 180px, 0px, 180px
-        gap: 50px
+        height: 668px
+        padding: 30px, 180px, 30px, 180px
+        gap: 28px
         align-items: center
     a 
         text-decoration: none
@@ -295,18 +302,17 @@ nav
         @include roboto_700
         font-size:24px
         Line-height:28,13px
-        margin: 0px 18.5px 0px 17.5px
+        margin: 54px 18.5px 0px 17.5px
     .resto_pack
         margin: 0px 17.5px 0px 17.5px
         gap: 18px
         @media only screen and (min-width: 907.5px)
-            padding: 0px 180px 0px 180px
             justify-content: center
             display: flex
             flex-direction: row
             width: 100% 
             height: 251px
-            gap: 100px
+            gap: 50px
         .card_rest
             height: 251px
             border-radius: 15px
@@ -350,15 +356,15 @@ nav
                     border: 0px #FFF
                     background: #FFF
                     .control-me::after 
-                        content: url("../images/icons/empty_like.svg")
+                        content: url("../images/icons/empty_like.png")
                     #toggle1:checked ~ .control-me::after 
-                        content: url("../images/icons/full_like.svg")
+                        content: url("../images/icons/full_like.png")
                     #toggle2:checked ~ .control-me::after 
-                        content: url("../images/icons/full_like.svg")
+                        content: url("../images/icons/full_like.png")
                     #toggle3:checked ~ .control-me::after 
-                        content: url("../images/icons/full_like.svg")
+                        content: url("../images/icons/full_like.png")
                     #toggle4:checked ~ .control-me::after 
-                        content: url("../images/icons/full_like.svg")
+                        content: url("../images/icons/full_like.png")
                     label 
                         padding: 0px
                     .visually-hidden 
