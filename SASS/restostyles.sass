@@ -14,14 +14,7 @@
     font-style: italic
     font-weight: 400
     letter-spacing: 0em
-    text-align: center
     color: #101010
-    top: 30px
-    margin: 0px
-
-@mixin restaurant__title
-    @include OhMyFood__title
-    font-size: 28px
 
 @mixin footer_title 
     @include OhMyFood__title
@@ -57,74 +50,76 @@
 body
     width: 100%
     height: 1590px
-    top: 1362px
-    left: -790px
     margin: 0px
+
+.main-container
+    box-sizing: border-box
+    width: 100%
+    justify-content: center
 
 .rest__nav
     width: 100%
-    height: 63px
-    gap: 10px
-    background: #FFFFFF
-    box-shadow: 0px 2px 4px 0px #00000026
-    align-content: center
+    height: 47px    
+    gap: 42px
+    padding: 14px 89px 13px 17px
+    background-color: #FFF
+    box-shadow: 0px 2px 4px 0px #00000026        
     .arrow
         width: 30px
         height: 30px
-        top: 17px
-        left: 17px
         position: absolute
+        top: 25px
+        left: 17px
+        color: #101010
         a 
-            text-decoration: none
-            color: #101010
-        .left_arrow
-            justify-content: center
-            height: 21px
-            top: 16.5px
-            left: 312px
+            text-decoration: none                
     .title
         width: 197px
-        height: 36px
-        top: 14px
+        top: -14px
         left: 89px
         padding: 0px, 19px, 0px, 16px
-        gap: 10px
+        align-content: center
         position: absolute
         h1
             @include OhMyFood__title
             width: 162px
             height: 44px
-            left: 16px
 
 .photorestaurantpage
     width: 100%
     height: 275px
-    top: 63px
+    //top: 63px
     object-fit: cover
 
-.corpus
+.general_menu //Here we deploy the whole menu + button to command
+    background-color: #F6F6F6
     width: 100%
-    height: 1121px
-    top: 283px
-    background: #F6F6F6
+    height: 1307px
     border-top-right-radius: 32px
     border-top-left-radius: 32px
-    gap: 40px
     position: absolute
-    padding-top: 25px
-    .rest_bar
-        justify-content: space-between
-        width: 91%
+    padding-top: 32px
+    top: 283px
+
+    .rest_bar  //Name of the restaurant and heart to be marked
+        align-content: center
+        width: 90.93%
         height: 29px
-        padding: 0px 17px 0px 17px        
+        padding: 0px 50px 0px 17px
+        justify-content: space-between
+        top: 0px
+        position: absolute
+        bottom: 40px
         h2
-            @include restaurant__title
+            @include OhMyFood__title
+            font-size: 28px
         .hearts
-            width: 25px
-            height: 25px
-            padding-top: 7px
+            width: 22px
+            height: 21px
             border: none 
             background: #F6F6F6
+            padding: 32px 30px 0px 0px
+            border-radius: 32px
             .control-me::after 
                 content: url("../images/icons/empty_like_resto.png")
             #toggle1:checked ~ .control-me::after 
@@ -135,70 +130,92 @@ body
                 position: absolute
                 left: -100vw
                 opacity: 0
-            
-    .menu
-        width: 87%
-        height: 270px
+
+    .courses
+        width: 93.07%
+        height: auto
+        justify-content: center
+        margin: 40px 20px 0px 15px
         gap: 12px
-        align-content: center
-        padding: 0px 20px 0px 20px
-        .menu_part
+
+        .course_part
+            width: 100%
+            height: 30px
             h3
                 @include roboto_300
                 font-size: 16px
                 color: #000
+                height: 24px
+                align-content: top
+            .line_below
+                width: 40px
+                height: 3px
+                background-color: #99E2D0
+                opacity: 1
+                align-content: bottom            
+
         .dish
-            width: 100%
-            height: 54px
-            border-radius: 15.04px
+            width: 90%
+            height: 40px
+            border-radius: 15px
             background: #FFF
             box-shadow: 0px 4.011494159698486px 15.043103218078613px 0px #0000001A
+            align-content: left
             padding: 15px
-            gap: 5px
-            .dish-name
-                align-content: left
-                .dish-title
-                    @include roboto_500
-                    font-size: 18px
-                    height: 21px
-                .dishpecifications
-                    justify-content: space-between
-                    .dish-description
-                        @include roboto_300
-                        font-size: 15.04px
-                        height: 19px
-                    .dish-price
-                        @include roboto_700
-                        font-size: 15.04px
-                        justify-content: flex-end
-                        align-content: flex-end
-                        height: 18px
+            .dish-title
+                @include roboto_500
+                font-size: 18px
+                height: 21px
+            .dishpecifications
+                justify-content: space-between
+                .dish-description
+                    @include roboto_300
+                    font-size: 15px
+                    height: 19px
+                .dish-price
+                    @include roboto_700
+                    font-size: 15px
+                    height: 18px
+                    text-align: right           
 
-    .button__commande
-        @include roboto_500
-        font-size: 16px        
-        justify-content:center
-        width: 186px
-        height: 50px
-        top: 50px
-        border-radius: 25px
-        Line-height: 18.75px
-        color: #FFFFFF
-        text-align: center
-        margin: 27px 75px 57px 82px
-        box-shadow: 0px 4px 10px 0px #00000040
-        background: linear-gradient(193.33deg, #9356DC 11.44%, #FF79DA 123.93%)
-        &:hover 
-            box-shadow: 0px 4px 15px 0px #00000059
-            background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%)
+    .press_button //Button to be pressed/hovered
+        justify-content: center
+        background-color: #F6F6F6
+        height: 130px
+        width: 100%
+        .button__commande
+            @include roboto_500
+            font-size: 16px
+            align-content: center        
+            justify-content:center
+            width: 186px
+            height: 50px
+            top: 50px
+            border-radius: 25px
+            Line-height: 18.75px
+            color: #FFFFFF
+            text-align: center
+            margin: 27px 75px 57px 82px
+            box-shadow: 0px 4px 10px 0px #00000040
+            background: linear-gradient(193.33deg, #9356DC 11.44%, #FF79DA 123.93%)
+            &:hover 
+                box-shadow: 0px 4px 15px 0px #00000059
+                background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%)
+                border: none
+    
+    
 
 footer
+    top: 1400px
+    bottom: 0px
+    position: absolute
     background-color: #353535
     width: 100%
     height: 186px
+    padding: 22px 25px
+    color: #FFFFFF
     .ft
-        padding: 22px 25px
-        color: #FFFFFF
+        gap: 16px
         a
             text-decoration: none
             color: #FFF

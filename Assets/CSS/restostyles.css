@@ -11,43 +11,40 @@
 body {
   width: 100%;
   height: 1590px;
-  top: 1362px;
-  left: -790px;
   margin: 0px;
+}
+
+.main-container {
+  box-sizing: border-box;
+  width: 100%;
+  justify-content: center;
 }
 
 .rest__nav {
   width: 100%;
-  height: 63px;
-  gap: 10px;
-  background: #FFFFFF;
+  height: 47px;
+  gap: 42px;
+  padding: 14px 89px 13px 17px;
+  background-color: #FFF;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1490196078);
-  align-content: center;
 }
 .rest__nav .arrow {
   width: 30px;
   height: 30px;
-  top: 17px;
-  left: 17px;
   position: absolute;
+  top: 25px;
+  left: 17px;
+  color: #101010;
 }
 .rest__nav .arrow a {
   text-decoration: none;
-  color: #101010;
-}
-.rest__nav .arrow .left_arrow {
-  justify-content: center;
-  height: 21px;
-  top: 16.5px;
-  left: 312px;
 }
 .rest__nav .title {
   width: 197px;
-  height: 36px;
-  top: 14px;
+  top: -14px;
   left: 89px;
   padding: 0px, 19px, 0px, 16px;
-  gap: 10px;
+  align-content: center;
   position: absolute;
 }
 .rest__nav .title h1 {
@@ -56,80 +53,80 @@ body {
   font-style: italic;
   font-weight: 400;
   letter-spacing: 0em;
-  text-align: center;
   color: #101010;
-  top: 30px;
-  margin: 0px;
   width: 162px;
   height: 44px;
-  left: 16px;
 }
 
 .photorestaurantpage {
   width: 100%;
   height: 275px;
-  top: 63px;
   object-fit: cover;
 }
 
-.corpus {
+.general_menu {
+  background-color: #F6F6F6;
   width: 100%;
-  height: 1121px;
-  top: 283px;
-  background: #F6F6F6;
+  height: 1307px;
   border-top-right-radius: 32px;
   border-top-left-radius: 32px;
-  gap: 40px;
   position: absolute;
-  padding-top: 25px;
+  padding-top: 32px;
+  top: 283px;
 }
-.corpus .rest_bar {
-  justify-content: space-between;
-  width: 91%;
+.general_menu .rest_bar {
+  align-content: center;
+  width: 90.93%;
   height: 29px;
-  padding: 0px 17px 0px 17px;
+  padding: 0px 50px 0px 17px;
+  justify-content: space-between;
+  top: 0px;
+  position: absolute;
+  bottom: 40px;
 }
-.corpus .rest_bar h2 {
+.general_menu .rest_bar h2 {
   font-family: Shrikhand;
   font-size: 30px;
   font-style: italic;
   font-weight: 400;
   letter-spacing: 0em;
-  text-align: center;
   color: #101010;
-  top: 30px;
-  margin: 0px;
   font-size: 28px;
 }
-.corpus .rest_bar .hearts {
-  width: 25px;
-  height: 25px;
-  padding-top: 7px;
+.general_menu .rest_bar .hearts {
+  width: 22px;
+  height: 21px;
   border: none;
   background: #F6F6F6;
+  padding: 32px 30px 0px 0px;
+  border-radius: 32px;
 }
-.corpus .rest_bar .hearts .control-me::after {
+.general_menu .rest_bar .hearts .control-me::after {
   content: url("../images/icons/empty_like_resto.png");
 }
-.corpus .rest_bar .hearts #toggle1:checked ~ .control-me::after {
+.general_menu .rest_bar .hearts #toggle1:checked ~ .control-me::after {
   content: url("../images/icons/full_like.png");
 }
-.corpus .rest_bar .hearts label {
+.general_menu .rest_bar .hearts label {
   padding: 0px;
 }
-.corpus .rest_bar .hearts .visually-hidden {
+.general_menu .rest_bar .hearts .visually-hidden {
   position: absolute;
   left: -100vw;
   opacity: 0;
 }
-.corpus .menu {
-  width: 87%;
-  height: 270px;
+.general_menu .courses {
+  width: 93.07%;
+  height: auto;
+  justify-content: center;
+  margin: 40px 20px 0px 15px;
   gap: 12px;
-  align-content: center;
-  padding: 0px 20px 0px 20px;
 }
-.corpus .menu .menu_part h3 {
+.general_menu .courses .course_part {
+  width: 100%;
+  height: 30px;
+}
+.general_menu .courses .course_part h3 {
   font-family: Roboto;
   font-size: 15px;
   letter-spacing: 0em;
@@ -137,20 +134,26 @@ body {
   font-weight: 300;
   font-size: 16px;
   color: #000;
+  height: 24px;
+  align-content: top;
 }
-.corpus .menu .dish {
-  width: 100%;
-  height: 54px;
-  border-radius: 15.04px;
+.general_menu .courses .course_part .line_below {
+  width: 40px;
+  height: 3px;
+  background-color: #99E2D0;
+  opacity: 1;
+  align-content: bottom;
+}
+.general_menu .courses .dish {
+  width: 90%;
+  height: 40px;
+  border-radius: 15px;
   background: #FFF;
   box-shadow: 0px 4.0114941597px 15.0431032181px 0px rgba(0, 0, 0, 0.1019607843);
-  padding: 15px;
-  gap: 5px;
-}
-.corpus .menu .dish .dish-name {
   align-content: left;
+  padding: 15px;
 }
-.corpus .menu .dish .dish-name .dish-title {
+.general_menu .courses .dish .dish-title {
   font-family: Roboto;
   font-size: 15px;
   letter-spacing: 0em;
@@ -160,30 +163,35 @@ body {
   font-size: 18px;
   height: 21px;
 }
-.corpus .menu .dish .dish-name .dishpecifications {
+.general_menu .courses .dish .dishpecifications {
   justify-content: space-between;
 }
-.corpus .menu .dish .dish-name .dishpecifications .dish-description {
+.general_menu .courses .dish .dishpecifications .dish-description {
   font-family: Roboto;
   font-size: 15px;
   letter-spacing: 0em;
   margin: 0px;
   font-weight: 300;
-  font-size: 15.04px;
+  font-size: 15px;
   height: 19px;
 }
-.corpus .menu .dish .dish-name .dishpecifications .dish-price {
+.general_menu .courses .dish .dishpecifications .dish-price {
   font-family: Roboto;
   font-size: 15px;
   letter-spacing: 0em;
   margin: 0px;
   font-weight: 700;
-  font-size: 15.04px;
-  justify-content: flex-end;
-  align-content: flex-end;
+  font-size: 15px;
   height: 18px;
+  text-align: right;
 }
-.corpus .button__commande {
+.general_menu .press_button {
+  justify-content: center;
+  background-color: #F6F6F6;
+  height: 130px;
+  width: 100%;
+}
+.general_menu .press_button .button__commande {
   font-family: Roboto;
   font-size: 15px;
   letter-spacing: 0em;
@@ -191,6 +199,7 @@ body {
   font-weight: 500;
   font-size: 16px;
   font-size: 16px;
+  align-content: center;
   width: 186px;
   height: 50px;
   top: 50px;
@@ -202,19 +211,24 @@ body {
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
   background: linear-gradient(193.33deg, #9356DC 11.44%, #FF79DA 123.93%);
 }
-.corpus .button__commande:hover {
+.general_menu .press_button .button__commande:hover {
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.3490196078);
   background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+  border: none;
 }
 
 footer {
+  top: 1400px;
+  bottom: 0px;
+  position: absolute;
   background-color: #353535;
   width: 100%;
   height: 186px;
-}
-footer .ft {
   padding: 22px 25px;
   color: #FFFFFF;
+}
+footer .ft {
+  gap: 16px;
 }
 footer .ft a {
   text-decoration: none;
@@ -226,10 +240,7 @@ footer .ft h2 {
   font-style: italic;
   font-weight: 400;
   letter-spacing: 0em;
-  text-align: center;
   color: #101010;
-  top: 30px;
-  margin: 0px;
   font-size: 18px;
   color: #FFF;
   text-align: left;
