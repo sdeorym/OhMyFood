@@ -10,7 +10,6 @@
 
 body {
   width: 100%;
-  height: 1590px;
   margin: 0px;
 }
 
@@ -21,31 +20,27 @@ body {
 }
 
 .rest__nav {
+  box-sizing: border-box;
   width: 100%;
-  height: 47px;
+  height: 63px;
   gap: 42px;
-  padding: 14px 89px 13px 17px;
+  padding: 14px 62px 13px 17px;
   background-color: #FFF;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1490196078);
+  align-items: center;
 }
 .rest__nav .arrow {
   width: 30px;
   height: 30px;
-  position: absolute;
-  top: 25px;
-  left: 17px;
   color: #101010;
 }
 .rest__nav .arrow a {
   text-decoration: none;
 }
 .rest__nav .title {
+  display: inline-block;
   width: 197px;
-  top: -14px;
-  left: 89px;
-  padding: 0px, 19px, 0px, 16px;
-  align-content: center;
-  position: absolute;
+  justify-content: center;
 }
 .rest__nav .title h1 {
   font-family: Shrikhand;
@@ -56,35 +51,37 @@ body {
   color: #101010;
   width: 162px;
   height: 44px;
+  padding-right: 89px;
+  text-align: center;
 }
 
-.photorestaurantpage {
+.restaurant {
+  box-sizing: content-box;
+  width: 100%;
+}
+.restaurant .photorestaurantpage {
   width: 100%;
   height: 275px;
   object-fit: cover;
 }
-
-.general_menu {
+.restaurant .local_menu {
+  box-sizing: content-box;
   background-color: #F6F6F6;
   width: 100%;
-  height: 1307px;
   border-top-right-radius: 32px;
   border-top-left-radius: 32px;
   position: absolute;
-  padding-top: 32px;
-  top: 283px;
+  margin-top: 220px;
 }
-.general_menu .rest_bar {
+.restaurant .rest_bar {
+  box-sizing: content-box;
   align-content: center;
   width: 90.93%;
   height: 29px;
   padding: 0px 50px 0px 17px;
   justify-content: space-between;
-  top: 0px;
-  position: absolute;
-  bottom: 40px;
 }
-.general_menu .rest_bar h2 {
+.restaurant .rest_bar h2 {
   font-family: Shrikhand;
   font-size: 30px;
   font-style: italic;
@@ -93,7 +90,8 @@ body {
   color: #101010;
   font-size: 28px;
 }
-.general_menu .rest_bar .hearts {
+.restaurant .rest_bar .hearts {
+  display: inline-block;
   width: 22px;
   height: 21px;
   border: none;
@@ -101,32 +99,32 @@ body {
   padding: 32px 30px 0px 0px;
   border-radius: 32px;
 }
-.general_menu .rest_bar .hearts .control-me::after {
+.restaurant .rest_bar .hearts .control-me::after {
   content: url("../images/icons/empty_like_resto.png");
 }
-.general_menu .rest_bar .hearts #toggle1:checked ~ .control-me::after {
+.restaurant .rest_bar .hearts #toggle1:checked ~ .control-me::after {
   content: url("../images/icons/full_like.png");
 }
-.general_menu .rest_bar .hearts label {
+.restaurant .rest_bar .hearts label {
   padding: 0px;
 }
-.general_menu .rest_bar .hearts .visually-hidden {
+.restaurant .rest_bar .hearts .visually-hidden {
   position: absolute;
   left: -100vw;
   opacity: 0;
 }
-.general_menu .courses {
+.restaurant .courses {
+  box-sizing: content-box;
   width: 93.07%;
-  height: auto;
   justify-content: center;
   margin: 40px 20px 0px 15px;
   gap: 12px;
 }
-.general_menu .courses .course_part {
+.restaurant .courses .course_part {
   width: 100%;
   height: 30px;
 }
-.general_menu .courses .course_part h3 {
+.restaurant .courses .course_part h3 {
   font-family: Roboto;
   font-size: 15px;
   letter-spacing: 0em;
@@ -137,14 +135,14 @@ body {
   height: 24px;
   align-content: top;
 }
-.general_menu .courses .course_part .line_below {
+.restaurant .courses .course_part .line_below {
   width: 40px;
   height: 3px;
   background-color: #99E2D0;
   opacity: 1;
   align-content: bottom;
 }
-.general_menu .courses .dish {
+.restaurant .courses .dish {
   width: 90%;
   height: 40px;
   border-radius: 15px;
@@ -153,7 +151,7 @@ body {
   align-content: left;
   padding: 15px;
 }
-.general_menu .courses .dish .dish-title {
+.restaurant .courses .dish .dish-title {
   font-family: Roboto;
   font-size: 15px;
   letter-spacing: 0em;
@@ -163,10 +161,10 @@ body {
   font-size: 18px;
   height: 21px;
 }
-.general_menu .courses .dish .dishpecifications {
+.restaurant .courses .dish .dishpecifications {
   justify-content: space-between;
 }
-.general_menu .courses .dish .dishpecifications .dish-description {
+.restaurant .courses .dish .dishpecifications .dish-description {
   font-family: Roboto;
   font-size: 15px;
   letter-spacing: 0em;
@@ -175,7 +173,7 @@ body {
   font-size: 15px;
   height: 19px;
 }
-.general_menu .courses .dish .dishpecifications .dish-price {
+.restaurant .courses .dish .dishpecifications .dish-price {
   font-family: Roboto;
   font-size: 15px;
   letter-spacing: 0em;
@@ -185,13 +183,15 @@ body {
   height: 18px;
   text-align: right;
 }
-.general_menu .press_button {
+.restaurant .press_button {
+  z-index: 1;
+  box-sizing: content-box;
   justify-content: center;
   background-color: #F6F6F6;
   height: 130px;
   width: 100%;
 }
-.general_menu .press_button .button__commande {
+.restaurant .press_button .button__commande {
   font-family: Roboto;
   font-size: 15px;
   letter-spacing: 0em;
@@ -202,7 +202,6 @@ body {
   align-content: center;
   width: 186px;
   height: 50px;
-  top: 50px;
   border-radius: 25px;
   Line-height: 18.75px;
   color: #FFFFFF;
@@ -211,23 +210,20 @@ body {
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
   background: linear-gradient(193.33deg, #9356DC 11.44%, #FF79DA 123.93%);
 }
-.general_menu .press_button .button__commande:hover {
+.restaurant .press_button .button__commande:hover {
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.3490196078);
   background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
   border: none;
 }
 
 footer {
-  top: 1400px;
-  bottom: 0px;
-  position: absolute;
+  margin-top: 1112px;
+  z-index: 1;
   background-color: #353535;
   width: 100%;
   height: 186px;
-  padding: 22px 25px;
+  padding: 22px 25px 22px 25px;
   color: #FFFFFF;
-}
-footer .ft {
   gap: 16px;
 }
 footer .ft a {
@@ -271,7 +267,6 @@ footer .ft .ft_menu .icon_plus_text p {
   Line-height: 18, 75px;
   width: 168px;
   height: 19px;
-  left: 22px;
   text-align: left;
   color: #FFFFFF;
 }

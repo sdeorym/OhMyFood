@@ -1,4 +1,4 @@
-.columns 
+.columns
   display: flex
   flex-direction: column
 
@@ -48,8 +48,7 @@
     font-weight: 300
 
 body
-    width: 100%
-    height: 1590px
+    width: 100%    
     margin: 0px
 
 .main-container
@@ -58,62 +57,61 @@ body
     justify-content: center
 
 .rest__nav
+    box-sizing: border-box
     width: 100%
-    height: 47px    
+    height: 63px    
     gap: 42px
-    padding: 14px 89px 13px 17px
+    padding: 14px 62px 13px 17px
     background-color: #FFF
-    box-shadow: 0px 2px 4px 0px #00000026        
+    box-shadow: 0px 2px 4px 0px #00000026
+    align-items: center 
     .arrow
         width: 30px
         height: 30px
-        position: absolute
-        top: 25px
-        left: 17px
         color: #101010
         a 
             text-decoration: none                
     .title
+        display: inline-block
         width: 197px
-        top: -14px
-        left: 89px
-        padding: 0px, 19px, 0px, 16px
-        align-content: center
-        position: absolute
+        justify-content: center
         h1
             @include OhMyFood__title
             width: 162px
             height: 44px
+            padding-right: 89px
+            text-align: center
+            
+.restaurant //It includes the photo, the name + heart, the whole menu & button to command
+    box-sizing: content-box
+    width:100%
 
-.photorestaurantpage
-    width: 100%
-    height: 275px
-    //top: 63px
-    object-fit: cover
-
-.general_menu //Here we deploy the whole menu + button to command
-    background-color: #F6F6F6
-    width: 100%
-    height: 1307px
-    border-top-right-radius: 32px
-    border-top-left-radius: 32px
-    position: absolute
-    padding-top: 32px
-    top: 283px
-
+    .photorestaurantpage
+        width: 100%
+        height: 275px
+        object-fit: cover
+    
+    .local_menu
+        box-sizing: content-box
+        background-color: #F6F6F6
+        width: 100%
+        border-top-right-radius: 32px
+        border-top-left-radius: 32px
+        position: absolute
+        margin-top: 220px
+        
     .rest_bar  //Name of the restaurant and heart to be marked
+        box-sizing: content-box
         align-content: center
         width: 90.93%
         height: 29px
         padding: 0px 50px 0px 17px
         justify-content: space-between
-        top: 0px
-        position: absolute
-        bottom: 40px
         h2
             @include OhMyFood__title
             font-size: 28px
         .hearts
+            display: inline-block
             width: 22px
             height: 21px
             border: none 
@@ -129,16 +127,14 @@ body
             .visually-hidden 
                 position: absolute
                 left: -100vw
-                opacity: 0
- 
+                opacity: 0 
     
     .courses
-        width: 93.07%
-        height: auto
+        box-sizing: content-box
+        width: 93.07%        
         justify-content: center
         margin: 40px 20px 0px 15px
         gap: 12px
-
         .course_part
             width: 100%
             height: 30px
@@ -153,13 +149,7 @@ body
                 height: 3px
                 background-color: #99E2D0
                 opacity: 1
-                align-content: bottom            
-        //1st_course
-        //    transition: transform 1000ms ease-in
-        //.2nd_course
-        //    transition: transform 2000ms ease-in
-        //.3rd_course
-        //    transition: transform 3000ms ease-in    
+                align-content: bottom                
         .dish
             width: 90%
             height: 40px
@@ -183,9 +173,10 @@ body
                     font-size: 15px
                     height: 18px
                     text-align: right
-         
 
     .press_button //Button to be pressed/hovered
+        z-index: 1
+        box-sizing: content-box
         justify-content: center
         background-color: #F6F6F6
         height: 130px
@@ -197,7 +188,6 @@ body
             justify-content:center
             width: 186px
             height: 50px
-            top: 50px
             border-radius: 25px
             Line-height: 18.75px
             color: #FFFFFF
@@ -208,21 +198,18 @@ body
             &:hover 
                 box-shadow: 0px 4px 15px 0px #00000059
                 background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%)
-                border: none
-    
-    
+                border: none  
 
 footer
-    top: 1400px
-    bottom: 0px
-    position: absolute
+    margin-top: 1112px
+    z-index: 1
     background-color: #353535
     width: 100%
     height: 186px
-    padding: 22px 25px
+    padding: 22px 25px 22px 25px
     color: #FFFFFF
+    gap: 16px
     .ft
-        gap: 16px
         a
             text-decoration: none
             color: #FFF
@@ -246,10 +233,9 @@ footer
                     Line-height:18,75px
                     width: 168px
                     height: 19px
-                    left: 22px
                     text-align: left
                     color: #FFFFFF
             p
                 @include roboto_400
                 Line-height: 18,75px
-                color: #FFFFFF
+                color: #FFFFFF 
