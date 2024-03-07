@@ -98,7 +98,29 @@ body {
   .restaurant .local_menu {
     width: 76.33%;
     height: 1215px;
-    margin: -51px 192px 0px 193px;
+    margin: -51px auto 0px auto;
+  }
+}
+.restaurant .local_menu .course1 {
+  animation: rogue-one 2s ease-in 0s forwards;
+  opacity: 0;
+}
+.restaurant .local_menu .course2 {
+  animation: rogue-one 2s ease-in 2s forwards;
+  opacity: 0;
+}
+.restaurant .local_menu .course3 {
+  animation: rogue-one 2s ease-in 4s forwards;
+  opacity: 0;
+}
+@keyframes rogue-one {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0%);
+    opacity: 1;
   }
 }
 .restaurant .rest_bar {

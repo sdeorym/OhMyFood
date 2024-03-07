@@ -113,8 +113,28 @@ body
         @media only screen and (min-width: 907.5px)
             width: 76.33%
             height: 1215px
-            margin: -51px 192px 0px 193px
-        
+            margin: -51px auto 0px auto
+
+        .course1 
+            animation: rogue-one 2s ease-in 0s forwards
+            opacity: 0 
+
+        .course2 
+            animation: rogue-one 2s ease-in 2s forwards
+            opacity: 0
+
+        .course3 
+            animation: rogue-one 2s ease-in 4s forwards
+            opacity: 0
+
+            @keyframes rogue-one 
+                from 
+                    transform: translateX(100%)
+                    opacity: 0
+                to 
+                    transform: translateX(0%)
+                    opacity: 1
+
     .rest_bar  //Name of the restaurant and heart to be marked
         box-sizing: content-box
         align-content: center
