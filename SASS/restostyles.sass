@@ -94,6 +94,7 @@ body
     @media only screen and (min-width: 907.5px)
         background-color: #FFF
         z-index: 0
+        overflow: hidden
 
     .photorestaurantpage
         width: 100%
@@ -111,9 +112,14 @@ body
         border-top-left-radius: 32px
         margin-top: -32px
         @media only screen and (min-width: 907.5px)
-            width: 76.33%
+            width: 73.33%
             height: 1215px
-            margin: -51px auto 0px auto
+            margin: -51px auto 40px auto
+            gap: 40px
+            .rest_bar
+                margin-top: 25.5px
+            .press_button
+                margin-bottom: 40px
 
         .course1 
             animation: rogue-one 2s ease-in 0s forwards
@@ -211,7 +217,7 @@ body
             align-content: left
             padding: 15px
             @media only screen and (min-width: 907.5px)
-                width: 60.1%
+                width: 75%
                 justify-content: center
             .dish-title
                 @include roboto_500

@@ -73,6 +73,7 @@ body {
   .restaurant {
     background-color: #FFF;
     z-index: 0;
+    overflow: hidden;
   }
 }
 .restaurant .photorestaurantpage {
@@ -96,9 +97,16 @@ body {
 }
 @media only screen and (min-width: 907.5px) {
   .restaurant .local_menu {
-    width: 76.33%;
+    width: 73.33%;
     height: 1215px;
-    margin: -51px auto 0px auto;
+    margin: -51px auto 40px auto;
+    gap: 40px;
+  }
+  .restaurant .local_menu .rest_bar {
+    margin-top: 25.5px;
+  }
+  .restaurant .local_menu .press_button {
+    margin-bottom: 40px;
   }
 }
 .restaurant .local_menu .course1 {
@@ -226,7 +234,7 @@ body {
 }
 @media only screen and (min-width: 907.5px) {
   .restaurant .courses .dish {
-    width: 60.1%;
+    width: 75%;
     justify-content: center;
   }
 }
