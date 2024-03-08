@@ -68,42 +68,49 @@ $whitey: #FFFFFF 15%
 body
     width: 100%
     height: 1362px
-    margin: 0px
     @media only screen and (min-width: 907.5px)
         max-width: 1440px
         height: 1395px
         gap: 30px
 
-.loaderbutton
-    display: inline-flex
-    justify-content: center
-    align-content: center
+.fadein
+    margin: 0px
+    animation: ohmy 1s ease 5s forwards
 
-.button__loader
-    text-align: center
+.loaderbutton
+    position: fixed
+    top: 0px
+    left: 0px
+    width: 100%
+    height: 100%
+    display: flex
+    z-index: 9999
+    background: #FFF
+    animation: opaque 1s ease-out 5s forwards
+    
+.ohmyfoodloader
+    animation: opaque 5s ease-out 0s forwards
+    display: inline-flex
     border: solid 5px #FFF
     outline: solid 5px #353535
-    border-radius: 50px
-    font-family: Shrikhand
-    font-size: 50px
-    color: #FFF
-    font-weight: 400
+    border-radius: 100px 
+    @include footer_title
+    font-size: 36px
+    width: 50%
+    height: 40px
+    padding: 30px 5px 5px 20px
+    margin: 250px auto 0px auto
+    background-color: #353535 
     justify-content:center
-    width: 100%
-    height: 75px
+    width: 218px
+    height: 50px
     top: 293px
     left: 82px
+    border-radius: 25px
     Line-height: 18.75px
-    padding: 20px
-    margin: 100px 10% 100px 10%
-    background-color: #353535
+    text-align: center
     @media only screen and (min-width: 907.5px)
-        gap: 30px
-        margin: 100px 50% 100px 50%
-        padding: 30px
-  
-#colorme
-  animation: opaque 5000ms forwards
+        padding: 30px 5px 5px 20px
   
 @keyframes opaque
   0%
@@ -115,33 +122,25 @@ body
     outline: solid 5px #353535
     opacity: .75
   50%
-    background-color: #353535
-    outline: solid 5px #353535
+    background-color: #9356DC
+    outline: solid 5px #9356DC
     opacity: .5
   75%
-    background-color: #353535
-    outline: solid 5px #353535
+    background-color: #FF79DA
+    outline: solid 5px #FF79DA
     opacity: .25
+    
   100%
-    background-color: #353535
-    outline: solid 5px #353535
-    opacity: 0
+    background-color: #FFF
+    outline: solid 5px #FFF
+    opacity: 0 
 
-#appearance
-    animation: coucou 5000ms forwards
-    animation-delay: 6000ms
-
-@keyframes coucou
-  0%
-    opacity: 0
-  25%
-    opacity: .25
-  50%
-    opacity: .5
-  75%
-    opacity: .75
-  100%
-    opacity: 1
+    
+@keyframes ohmy
+    0%
+        opacity: 0
+    100%
+        opacity: 1
 
 .main_container
     margin-top: 0px
