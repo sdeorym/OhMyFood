@@ -31,13 +31,11 @@ body {
     gap: 30px;
   }
 }
-
-.fadein {
+body .fadein {
   margin: 0px;
   animation: ohmy 1s ease 5s forwards;
 }
-
-.loaderbutton {
+body .loaderbutton {
   position: fixed;
   top: 0px;
   left: 0px;
@@ -48,8 +46,7 @@ body {
   background: #FFF;
   animation: opaque 1s ease-out 5s forwards;
 }
-
-.ohmyfoodloader {
+body .ohmyfoodloader {
   animation: opaque 5s ease-out 0s forwards;
   display: inline-flex;
   border: solid 5px #FFF;
@@ -79,11 +76,10 @@ body {
   text-align: center;
 }
 @media only screen and (min-width: 907.5px) {
-  .ohmyfoodloader {
+  body .ohmyfoodloader {
     padding: 30px 5px 5px 20px;
   }
 }
-
 @keyframes opaque {
   0% {
     background-color: #353535;
@@ -119,7 +115,7 @@ body {
     opacity: 1;
   }
 }
-.main_container {
+body .main_container {
   margin-top: 0px;
   width: 100%;
   align-items: center;
@@ -549,7 +545,6 @@ footer {
   height: 186px;
   padding: 22px 25px;
   color: #FFFFFF;
-  position: absolute;
 }
 @media only screen and (min-width: 907.5px) {
   footer {
