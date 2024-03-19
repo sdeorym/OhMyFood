@@ -233,6 +233,11 @@ body {
   align-content: left;
   padding: 15px;
 }
+@media only screen and (min-width: 907.5px) {
+  .restaurant .courses .dish {
+    width: 75%;
+  }
+}
 .restaurant .courses .dish label {
   width: 100%;
   display: inline-block;
@@ -252,9 +257,8 @@ body {
   transform: translate(35%, -49%);
 }
 @media only screen and (min-width: 907.5px) {
-  .restaurant .courses .dish label {
-    width: 75%;
-    justify-content: center;
+  .restaurant .courses .dish label:hover:hover .tick {
+    transform: translate(-49%, -49%);
   }
 }
 .restaurant .courses .dish label .dish-title {
@@ -324,9 +328,19 @@ body {
   transform: translate(35%, -49%);
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
+@media only screen and (min-width: 907.5px) {
+  .restaurant .courses .dish *[id^=dish]:checked ~ .control-me::after {
+    transform: translate(127%, -49%);
+  }
+}
 .restaurant .courses .dish *[id^=dish]:checked + label {
   display: inline-block;
   width: 83.5%;
+}
+@media only screen and (min-width: 907.5px) {
+  .restaurant .courses .dish *[id^=dish]:checked + label {
+    width: 90%;
+  }
 }
 .restaurant .courses .dish label {
   padding: 0px;

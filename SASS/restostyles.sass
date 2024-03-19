@@ -226,12 +226,15 @@ body
             box-shadow: 0px 4.011494159698486px 15.043103218078613px 0px #0000001A
             align-content: left
             padding: 15px
+            @media only screen and (min-width: 907.5px)
+                width: 75%
             label
                 width: 100%
                 display: inline-block
                 cursor: pointer
                 position: relative
                 transition: width 1s forwards
+                
                 &:hover 
                     width: calc(100% - 59px)
                     opacity: 0.85      
@@ -240,10 +243,10 @@ body
                         position: absolute
                         top: 51%
                         right: -20%
-                        transform: translate(35%, -49%) 
-                @media only screen and (min-width: 907.5px)
-                    width: 75%
-                    justify-content: center
+                        transform: translate(35%, -49%)
+                        @media only screen and (min-width: 907.5px)
+                            transform: translate(-49%, -49%)
+                
                 .dish-title
                     @include roboto_500
                     font-size: 18px
@@ -292,11 +295,15 @@ body
                 background-repeat: no-repeat 
                 opacity: 1
                 transform: translate(35%, -49%) 
-                transition: opacity 0.3s ease, transform 0.3s ease  
+                transition: opacity 0.3s ease, transform 0.3s ease
+                @media only screen and (min-width: 907.5px)
+                    transform: translate(127%, -49%)  
 
             *[id^="dish"]:checked + label   
                 display: inline-block
                 width: 83.5%
+                @media only screen and (min-width: 907.5px)
+                    width: 90%
 
             label  
                 padding: 0px
