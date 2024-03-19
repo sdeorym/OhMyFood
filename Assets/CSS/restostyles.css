@@ -224,8 +224,6 @@ body {
   align-content: bottom;
 }
 .restaurant .courses .dish {
-  display: inline-block;
-  cursor: pointer;
   position: relative;
   width: 90%;
   height: 40px;
@@ -234,15 +232,32 @@ body {
   box-shadow: 0px 4.0114941597px 15.0431032181px 0px rgba(0, 0, 0, 0.1019607843);
   align-content: left;
   padding: 15px;
-  transition: width 3s forwards;
+}
+.restaurant .courses .dish label {
+  width: 100%;
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  transition: width 1s forwards;
+}
+.restaurant .courses .dish label:hover {
+  width: calc(100% - 59px);
+  opacity: 0.85;
+}
+.restaurant .courses .dish label:hover:hover .tick {
+  opacity: 1;
+  position: absolute;
+  top: 51%;
+  right: -20%;
+  transform: translate(35%, -49%);
 }
 @media only screen and (min-width: 907.5px) {
-  .restaurant .courses .dish {
+  .restaurant .courses .dish label {
     width: 75%;
     justify-content: center;
   }
 }
-.restaurant .courses .dish .dish-title {
+.restaurant .courses .dish label .dish-title {
   font-family: Roboto;
   font-size: 15px;
   letter-spacing: 0em;
@@ -255,10 +270,10 @@ body {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.restaurant .courses .dish .dishpecifications {
+.restaurant .courses .dish label .dishpecifications {
   justify-content: space-between;
 }
-.restaurant .courses .dish .dishpecifications .dish-description {
+.restaurant .courses .dish label .dishpecifications .dish-description {
   font-family: Roboto;
   font-size: 15px;
   letter-spacing: 0em;
@@ -270,7 +285,7 @@ body {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.restaurant .courses .dish .dishpecifications .dish-price {
+.restaurant .courses .dish label .dishpecifications .dish-price {
   font-family: Roboto;
   font-size: 15px;
   letter-spacing: 0em;
@@ -280,18 +295,12 @@ body {
   height: 18px;
   text-align: right;
 }
-.restaurant .courses .dish .tick {
+.restaurant .courses .dish label .tick {
   opacity: 0;
   position: absolute;
   top: 51%;
   right: -20%;
-  transform: translate(-16.5%, -50%);
-}
-.restaurant .courses .dish .dish *[id^=dish]:not(:checked):hover ~ label {
-  width: 75%;
-}
-.restaurant .courses .dish .dish *[id^=dish]:not(:checked):hover ~ label .tick {
-  opacity: 1;
+  transform: translate(35%, -49%);
 }
 .restaurant .courses .dish .control-me::after {
   position: relative;
@@ -301,14 +310,15 @@ body {
 .restaurant .courses .dish *[id^=dish]:checked ~ .control-me::after {
   content: url("../images/icons/Select_button.png");
   position: absolute;
-  left: 82.5%;
-  top: 0;
-  transform: translateY(0) translateX(0%);
+  left: 78%;
+  top: 51%;
+  transform: translateY(0%) translateX(0%);
   width: -59px;
   height: 100%;
   background-size: contain;
   background-repeat: no-repeat;
   opacity: 1;
+  transform: translate(35%, -49%);
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
 .restaurant .courses .dish *[id^=dish]:checked + label {
@@ -317,12 +327,6 @@ body {
 }
 .restaurant .courses .dish label {
   padding: 0px;
-}
-.restaurant .courses .dish label .dish *[id^=dish]:not(:checked):hover {
-  width: 75%;
-}
-.restaurant .courses .dish label .dish *[id^=dish]:not(:checked):hover > .tick {
-  opacity: 1;
 }
 .restaurant .courses .dish .visually-hidden {
   position: absolute;
