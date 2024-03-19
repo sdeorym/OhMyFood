@@ -47,6 +47,15 @@
     @include roboto_fam
     font-weight: 300
 
+@mixin dish_title_width
+    width: calc(100% - 25%)
+
+@mixin dishpecifications_width
+    width: calc(100% - 25%)
+
+@mixin dish_features
+    @include dish_title_width
+    @include dishpecifications_width
 
 // Here starts the web
 body
@@ -206,8 +215,12 @@ body
                 height: 3px
                 background-color: #99E2D0
                 opacity: 1
-                align-content: bottom                
+                align-content: bottom            
+
         .dish
+            display: inline-block
+            cursor: pointer
+            position: relative
             width: 90%
             height: 40px
             border-radius: 15px
@@ -215,26 +228,82 @@ body
             box-shadow: 0px 4.011494159698486px 15.043103218078613px 0px #0000001A
             align-content: left
             padding: 15px
+            transition: width 3s forwards
             @media only screen and (min-width: 907.5px)
                 width: 75%
                 justify-content: center
             .dish-title
                 @include roboto_500
                 font-size: 18px
-                height: 21px                
+                height: 21px
+                overflow: hidden
+                text-overflow: ellipsis
+                white-space: nowrap                
             .dishpecifications
                 justify-content: space-between
                 .dish-description
                     @include roboto_300
                     font-size: 15px
                     height: 19px
+                    overflow: hidden
+                    text-overflow: ellipsis
+                    white-space: nowrap
                 .dish-price
                     @include roboto_700
                     font-size: 15px
                     height: 18px
                     text-align: right
-                       
-           
+            .tick 
+                opacity: 0
+                position: absolute
+                top: 51%
+                right: -20%
+                transform: translate(-16.5%, -50%)
+            .dish 
+                *[id^="dish"]:not(:checked):hover ~ label
+                    width: calc(100% - 25%)         
+            .dish 
+                *[id^="dish"]:not(:checked):hover ~ label .tick 
+                    opacity: 1
+
+            .control-me::after
+                position: relative
+                content: 'url("../images/icons/Select_button.png")'
+                opacity: 0   
+
+            *[id^="dish"]:checked ~ .control-me::after 
+                content: url('../images/icons/Select_button.png')
+                position: absolute 
+                left: 82.5% 
+                top: 0 
+                transform: translateY(0) translateX(0%) 
+                width: -59px 
+                height: 100% 
+                background-size: contain 
+                background-repeat: no-repeat 
+                opacity: 1 
+                transition: opacity 0.3s ease, transform 0.3s ease  
+
+            *[id^="dish"]:checked + label   
+                //border: solid 2px #F00
+                //background-color: #F0F
+                display: inline-block
+                width: 83.5%
+                //overflow: hidden
+                //text-overflow: ellipsis
+                //white-space: nowrap
+            label  
+                padding: 0px
+                .dish *[id^="dish"]:not(:checked):hover 
+                    width: calc(100% - 25%)
+                .dish *[id^="dish"]:not(:checked):hover > .tick
+                    opacity: 1
+            .visually-hidden 
+                position: absolute
+                left: -100vw
+                opacity: 0
+
+            //Manipular el label para que entre en cuadro y luego ya metes el click. 
 
     .press_button //Button to be pressed/hovered
         z-index: 1

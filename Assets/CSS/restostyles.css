@@ -224,6 +224,9 @@ body {
   align-content: bottom;
 }
 .restaurant .courses .dish {
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
   width: 90%;
   height: 40px;
   border-radius: 15px;
@@ -231,6 +234,7 @@ body {
   box-shadow: 0px 4.0114941597px 15.0431032181px 0px rgba(0, 0, 0, 0.1019607843);
   align-content: left;
   padding: 15px;
+  transition: width 3s forwards;
 }
 @media only screen and (min-width: 907.5px) {
   .restaurant .courses .dish {
@@ -247,6 +251,9 @@ body {
   font-size: 16px;
   font-size: 18px;
   height: 21px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .restaurant .courses .dish .dishpecifications {
   justify-content: space-between;
@@ -259,6 +266,9 @@ body {
   font-weight: 300;
   font-size: 15px;
   height: 19px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .restaurant .courses .dish .dishpecifications .dish-price {
   font-family: Roboto;
@@ -269,6 +279,55 @@ body {
   font-size: 15px;
   height: 18px;
   text-align: right;
+}
+.restaurant .courses .dish .tick {
+  opacity: 0;
+  position: absolute;
+  top: 51%;
+  right: -20%;
+  transform: translate(-16.5%, -50%);
+}
+.restaurant .courses .dish .dish *[id^=dish]:not(:checked):hover ~ label {
+  width: 75%;
+}
+.restaurant .courses .dish .dish *[id^=dish]:not(:checked):hover ~ label .tick {
+  opacity: 1;
+}
+.restaurant .courses .dish .control-me::after {
+  position: relative;
+  content: 'url("../images/icons/Select_button.png")';
+  opacity: 0;
+}
+.restaurant .courses .dish *[id^=dish]:checked ~ .control-me::after {
+  content: url("../images/icons/Select_button.png");
+  position: absolute;
+  left: 82.5%;
+  top: 0;
+  transform: translateY(0) translateX(0%);
+  width: -59px;
+  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 1;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.restaurant .courses .dish *[id^=dish]:checked + label {
+  display: inline-block;
+  width: 83.5%;
+}
+.restaurant .courses .dish label {
+  padding: 0px;
+}
+.restaurant .courses .dish label .dish *[id^=dish]:not(:checked):hover {
+  width: 75%;
+}
+.restaurant .courses .dish label .dish *[id^=dish]:not(:checked):hover > .tick {
+  opacity: 1;
+}
+.restaurant .courses .dish .visually-hidden {
+  position: absolute;
+  left: -100vw;
+  opacity: 0;
 }
 .restaurant .press_button {
   z-index: 1;

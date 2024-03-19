@@ -67,6 +67,8 @@ $whitey: #FFFFFF 15%
 // Here starts the web
 body
     width: 100%
+    padding: 0px
+    margin: 0px
     height: 1362px
     @media only screen and (min-width: 907.5px)
         max-width: 1440px
@@ -86,10 +88,12 @@ body
         display: flex
         z-index: 9999
         background: #FFF
-        animation: opaque 1s ease-out 5s forwards
+        animation: opaque 1s ease-out 2s forwards
+        //&:after
+        //   display: none
         
     .ohmyfoodloader
-        animation: opaque 5s ease-out 0s forwards
+        animation: opaque 2s ease-out 0s forwards
         display: inline-flex
         border: solid 5px #FFF
         outline: solid 5px #353535
@@ -128,12 +132,12 @@ body
             75%
                 background-color: #FF79DA
                 outline: solid 5px #FF79DA
-                opacity: .25
-                
+                opacity: .25                
             100%
                 background-color: #FFF
                 outline: solid 5px #FFF
-                opacity: 0 
+                opacity: 0
+                visibility: hidden
 
             
         @keyframes ohmy
@@ -142,10 +146,13 @@ body
             100%
                 opacity: 1
 
+
     .main_container
         margin-top: 0px
         width: 100%
         align-items: center
+        padding: 0px
+        margin: 0px
         box-sizing: border-box
 
 
@@ -157,10 +164,11 @@ nav
     .nav_title
         justify-content: center
         text-align: center
-        padding: 0px 19px 0px 16px
+        padding: 0px
         top: 14px
         h1
             @include OhMyFood__title
+            width: 100%
             height: 63px
             background-color:#FFFFFF
             box-shadow: 0px 2px 4px 0px #00000026
@@ -412,7 +420,7 @@ nav
                     width: 25px
                     height: 25px
                     border: 0px #FFF
-                    background: #FFF
+                    background: #FFF 
                     .control-me::after 
                         content: url("../images/icons/empty_like.png")
                     #toggle1:checked ~ .control-me::after 
