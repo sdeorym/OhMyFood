@@ -272,6 +272,9 @@ body {
 }
 .restaurant .courses .dish label .dishpecifications {
   justify-content: space-between;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .restaurant .courses .dish label .dishpecifications .dish-description {
   font-family: Roboto;
