@@ -17,7 +17,7 @@ $whitey: #FFFFFF 15%
     height: 24px
     left: 20px
     color: #9356DC
-    left: 20,51px
+    left: 20.51px
 
 .fa-mobile-screen-button, .fa-list-ul
     color: #7E7E7E
@@ -196,14 +196,13 @@ nav
             border: none
             background-color: #EAEAEA
             opacity: 1
-            ::placeholder
-                @include roboto_500
-                border: none
-                color: #353535
-                background-color: #EAEAEA
-                opacity: 1
+            @include roboto_500
+            color: #353535
+            background-color: #EAEAEA
+            opacity: 1
             @media only screen and (min-width: 907.5px)
-                height: 50px     
+                height: 50px
+                margin-top: 32px     
         
 .reservation
     width: 100%
@@ -231,7 +230,7 @@ nav
             width: 100%
             height: 68px
             top: 176px
-            left: 397,5px
+            left: 397.5px
     h3
         @include roboto_300
         font-size: 18px
@@ -267,18 +266,24 @@ nav
     padding-right: 20px
     padding-left: 20px
     gap: 26px
-    box-sizing: border-box
+    //box-sizing: border-box
+    justify-content: flex-start
+    h2
+        //display: inline-block
+        @include roboto_700
+        font-size:24px
+        Line-height:28.13px
+        margin: 48px 0px 0px 0%
+        right: 0% 
     .procedure
         display: flex
         flex-direction: column
         justify-content: space-between
         width: 100%
         height: 268px
-        gap: 25px    
+        gap: 25px      
     @media only screen and (min-width: 907.5px)
         height: 228.38px
-        padding: 50px, 180px, 50px, 180px
-        gap: 25px
         align-items: center
         .procedure
             display: flex
@@ -287,26 +292,20 @@ nav
             width: 73.12%
             height: 72.38px
             gap: 24px
-    h2
-        @include roboto_700
-        font-size:24px
-        Line-height:28.13px
-        text-align: left
-        margin-top: 48px
+    
     .procedure-box
         position: relative
         color: #FFF
-        height: 72.38px
+        height: 72.4px
         border-radius: 20px
         color: #F6F6F6        
         gap: 27px
         align-items: center
-        @media only screen and (min-width: 907.5px)
-            width: 31%
-            height: 100%
+
         .step
             position: absolute
-            align-items: left
+            align-items: flex-start
+            
             //Police specifications
             @include roboto_500
             font-size: 14.18px
@@ -314,6 +313,7 @@ nav
             color:#FFF
             display: inline-block
             padding-top: 3px
+            
             //Bullet-point
             border-radius: 24px
             width: 24px
@@ -322,6 +322,7 @@ nav
             background-color: #9356DC
             text-align: center
             left: -12px
+
         .clipped-box
             padding-left: 30px
             box-shadow: 0px 4px 15px 0px #00000026
@@ -332,24 +333,18 @@ nav
             align-items: center
             height: 100%
             width:100%
-            gap: 40px
-            left: 12px
-            right: 20px
-            justify-content: evenly
-            @media only screen and (min-width: 907.5px)
-                width: 100%
-                height: 100%
-                top: 106px
-                border-radius: 20px
-                padding-left: 30px
-                gap: 40px
-                align-items: evenly
-            p
+            gap: 27px
+            justify-content: flex-start
+            flex-shrink: 0
+
+            h3
                 @include roboto_500
                 line-height: 19px
                 letter-spacing: 0em
                 text-align: left
                 color: #000
+                @media only screen and (min-width: 907.5px)
+                    width: 211px 
 
 .restaurants
     width: 100%
@@ -358,7 +353,6 @@ nav
     background-color: #F6F6F6
     @media only screen and (min-width: 907.5px)
         height: 668px
-        padding: 30px, 180px, 30px, 180px
         gap: 28px
         align-items: center
     a 
@@ -366,8 +360,8 @@ nav
         color: #000
     h2
         @include roboto_700
-        font-size:24px
-        Line-height:28,13px
+        font-size: 24px
+        Line-height: 28.13px
         margin: 54px 18.5px 0px 17.5px
     .resto_pack
         margin: 0px 17.5px 0px 17.5px
@@ -389,13 +383,13 @@ nav
             .newbie_box
                 width: 80px
                 height: 29px
-                //border-radius: 2px
-                //background-color: #99e2d0 100%
+                border-radius: 2px
+                background-color: #99e2d0 100%
                 box-shadow: 0px 2px 4px 0px #00000026
                 position: relative
                 top: 10px
                 left: 70%
-                //border: #99E2D0
+                border: #99E2D0
                 p
                     width: 61.37px
                     height: 16px
@@ -420,7 +414,7 @@ nav
                     width: 25px
                     height: 25px
                     border: 0px #FFF
-                    background: #FFF 
+                    background: #FFF
                     .control-me::after 
                         content: url("../images/icons/empty_like.png")
                     #toggle1:checked ~ .control-me::after 
@@ -462,14 +456,14 @@ footer
     color: #FFFFFF
     @media only screen and (min-width: 907.5px)
         height: 114px
-        padding: 30px, 25px, 30px, 25px                 
+        padding: 30px 25px 30px 25px                 
     .ft
         gap: 16px
         @media only screen and (min-width: 907.5px)
             display: flex
             flex-direction: row-reverse
             align-content: flex-start
-            justify-content: bottom 
+            justify-content: baseline 
             gap: 16px
         a
             text-decoration: none
@@ -500,10 +494,10 @@ footer
                 color: #FFFFFF
                 .ft_icon
                     width: 25px
-                    align-items: left
+                    align-items: flex-start
                 p
                     @include roboto_500
-                    Line-height:18,75px
+                    Line-height:18.75px
                     width: 168px
                     height: 19px
                     left: 22px
@@ -511,5 +505,5 @@ footer
                     color: #FFFFFF
             p
                 @include roboto_400
-                Line-height: 18,75px
+                Line-height: 18.75px
                 color: #FFFFFF

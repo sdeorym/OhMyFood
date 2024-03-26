@@ -8,6 +8,18 @@
   flex-direction: row;
 }
 
+@keyframes flyoverzone {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+    background-color: rgba(153, 226, 208, 0);
+  }
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+    background-color: rgb(153, 226, 208);
+  }
+}
 body {
   width: 100%;
   margin: 0px;
@@ -238,30 +250,7 @@ body {
     width: 75%;
   }
 }
-.restaurant .courses .dish label {
-  width: 100%;
-  display: inline-block;
-  cursor: pointer;
-  position: relative;
-  transition: width 1s forwards;
-}
-.restaurant .courses .dish label:hover {
-  width: calc(100% - 59px);
-  opacity: 0.85;
-}
-.restaurant .courses .dish label:hover:hover .tick {
-  opacity: 1;
-  position: absolute;
-  top: 51%;
-  right: -20%;
-  transform: translate(35%, -49%);
-}
-@media only screen and (min-width: 907.5px) {
-  .restaurant .courses .dish label:hover:hover .tick {
-    transform: translate(-49%, -49%);
-  }
-}
-.restaurant .courses .dish label .dish-title {
+.restaurant .courses .dish .dish-title {
   font-family: Roboto;
   font-size: 15px;
   letter-spacing: 0em;
@@ -274,13 +263,13 @@ body {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.restaurant .courses .dish label .dishpecifications {
+.restaurant .courses .dish .dishpecifications {
   justify-content: space-between;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.restaurant .courses .dish label .dishpecifications .dish-description {
+.restaurant .courses .dish .dishpecifications .dish-description {
   font-family: Roboto;
   font-size: 15px;
   letter-spacing: 0em;
@@ -292,7 +281,7 @@ body {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.restaurant .courses .dish label .dishpecifications .dish-price {
+.restaurant .courses .dish .dishpecifications .dish-price {
   font-family: Roboto;
   font-size: 15px;
   letter-spacing: 0em;
@@ -302,53 +291,40 @@ body {
   height: 18px;
   text-align: right;
 }
-.restaurant .courses .dish label .tick {
+.restaurant .courses .dish .tick {
   opacity: 0;
   position: absolute;
-  top: 51%;
-  right: -20%;
-  transform: translate(35%, -49%);
-}
-.restaurant .courses .dish .control-me::after {
-  position: relative;
-  content: 'url("../images/icons/Select_button.png")';
-  opacity: 0;
-}
-.restaurant .courses .dish *[id^=dish]:checked ~ .control-me::after {
-  content: url("../images/icons/Select_button.png");
-  position: absolute;
-  left: 78%;
-  top: 51%;
-  transform: translateY(0%) translateX(0%);
-  width: -59px;
+  width: 59px;
   height: 100%;
-  background-size: contain;
-  background-repeat: no-repeat;
+  justify-content: flex-end;
+  align-items: center;
+}
+.restaurant .courses .dish:hover {
+  width: calc(100% - 82px);
+}
+@media only screen and (min-width: 907.5px) {
+  .restaurant .courses .dish:hover {
+    width: calc(75% - 60px);
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+}
+.restaurant .courses .dish:hover:hover .tick {
   opacity: 1;
-  transform: translate(35%, -49%);
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  top: 0%;
+  right: -11%;
+  width: 59px;
+  height: 70px;
+  justify-content: flex-end;
+  align-items: center;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  animation: flyoverzone 0.4s ease-in -0.2s forwards;
 }
-@media only screen and (min-width: 907.5px) {
-  .restaurant .courses .dish *[id^=dish]:checked ~ .control-me::after {
-    transform: translate(127%, -49%);
-  }
-}
-.restaurant .courses .dish *[id^=dish]:checked + label {
-  display: inline-block;
-  width: 83.5%;
-}
-@media only screen and (min-width: 907.5px) {
-  .restaurant .courses .dish *[id^=dish]:checked + label {
-    width: 90%;
-  }
-}
-.restaurant .courses .dish label {
-  padding: 0px;
-}
-.restaurant .courses .dish .visually-hidden {
-  position: absolute;
-  left: -100vw;
-  opacity: 0;
+.restaurant .courses .dish:hover:hover .tick img {
+  width: 22px;
+  height: 22px;
+  padding: 23.5px 18.5px 23.5px 18.5px;
 }
 .restaurant .press_button {
   z-index: 1;
