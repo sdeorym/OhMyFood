@@ -63,6 +63,17 @@ $whitey: #FFFFFF 15%
     @include roboto_fam
     font-weight: 300
 
+@mixin sectit
+    @include roboto_700
+    font-size: 24px
+    Line-height: 28.13px
+    @media only screen and (min-width: 907.5px)
+        display: inline-flex
+        text-align: left
+        justify-content: flex-start
+        align-items: left
+        width: 275px
+        margin-right: 54%
 
 // Here starts the web
 body
@@ -266,15 +277,11 @@ nav
     padding-right: 20px
     padding-left: 20px
     gap: 26px
-    //box-sizing: border-box
+    box-sizing: border-box
     justify-content: flex-start
     h2
-        //display: inline-block
-        @include roboto_700
-        font-size:24px
-        Line-height:28.13px
-        margin: 48px 0px 0px 0%
-        right: 0% 
+        @include sectit
+        margin: 48px 0px 0px 0px
     .procedure
         display: flex
         flex-direction: column
@@ -336,7 +343,6 @@ nav
             gap: 27px
             justify-content: flex-start
             flex-shrink: 0
-
             h3
                 @include roboto_500
                 line-height: 19px
@@ -359,9 +365,7 @@ nav
         text-decoration: none
         color: #000
     h2
-        @include roboto_700
-        font-size: 24px
-        Line-height: 28.13px
+        @include sectit
         margin: 54px 18.5px 0px 17.5px
     .resto_pack
         margin: 0px 17.5px 0px 17.5px
@@ -390,7 +394,7 @@ nav
                 top: 10px
                 left: 70%
                 border: #99E2D0
-                p
+                .newbie_text
                     width: 61.37px
                     height: 16px
                     top: 7px

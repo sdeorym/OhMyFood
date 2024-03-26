@@ -285,6 +285,7 @@ nav .location .location_city {
   padding-right: 20px;
   padding-left: 20px;
   gap: 26px;
+  box-sizing: border-box;
   justify-content: flex-start;
 }
 .how_it_works h2 {
@@ -295,8 +296,17 @@ nav .location .location_city {
   font-weight: 700;
   font-size: 24px;
   Line-height: 28.13px;
-  margin: 48px 0px 0px 0%;
-  right: 0%;
+  margin: 48px 0px 0px 0px;
+}
+@media only screen and (min-width: 907.5px) {
+  .how_it_works h2 {
+    display: inline-flex;
+    text-align: left;
+    justify-content: flex-start;
+    align-items: left;
+    width: 275px;
+    margin-right: 54%;
+  }
 }
 .how_it_works .procedure {
   display: flex;
@@ -410,6 +420,16 @@ nav .location .location_city {
   Line-height: 28.13px;
   margin: 54px 18.5px 0px 17.5px;
 }
+@media only screen and (min-width: 907.5px) {
+  .restaurants h2 {
+    display: inline-flex;
+    text-align: left;
+    justify-content: flex-start;
+    align-items: left;
+    width: 275px;
+    margin-right: 54%;
+  }
+}
 .restaurants .resto_pack {
   margin: 0px 17.5px 0px 17.5px;
   gap: 18px;
@@ -446,7 +466,7 @@ nav .location .location_city {
   left: 70%;
   border: #99E2D0;
 }
-.restaurants .resto_pack .card_rest .newbie_box p {
+.restaurants .resto_pack .card_rest .newbie_box .newbie_text {
   width: 61.37px;
   height: 16px;
   top: 7px;
