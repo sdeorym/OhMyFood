@@ -19,7 +19,7 @@ $whitey: #FFFFFF 15%
     color: #9356DC
     left: 20.51px
 
-.fa-mobile-screen-button, .fa-list-ul
+.fa-mobile-screen-tton, .fa-list-ul
     color: #7E7E7E
 
 //WEBPAGE FONTS
@@ -72,6 +72,19 @@ $whitey: #FFFFFF 15%
         justify-content: flex-start
         width: 275px
         margin-right: 54%
+
+@keyframes emptiness
+    from 
+        opacity: 1
+    to 
+        opacity: 0
+
+@keyframes fullness
+    from 
+        opacity: 0
+    to 
+        opacity: 1
+
 
 // Here starts the web
 body
@@ -412,6 +425,26 @@ nav
                 align-items: center
                 padding: 20px
                 justify-content: space-between
+                
+                .heart
+                    height: 22px
+                    .hearty
+                        opacity: 1
+                    .colourheart
+                        opacity: 0
+                    &:hover
+                        .hearty
+                            animation: emptiness 0.25s ease-out forwards
+                        .colourheart
+                            animation: fullness 0.25s ease-in forwards
+                    @media only screen and (min-width: 907.5px)
+                        .hearty
+                            margin-right: -2px
+                            opacity: 1
+                        .colourheart
+                            margin-left: -21px
+                            opacity: 0
+                         
                 .hearts
                     width: 25px
                     height: 25px

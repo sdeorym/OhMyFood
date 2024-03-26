@@ -16,6 +16,18 @@
         opacity: 1
         background-color: rgba(153, 226, 208, 1)
 
+@keyframes emptiness
+    from 
+        opacity: 1
+    to 
+        opacity: 0
+
+@keyframes fullness
+    from 
+        opacity: 0
+    to 
+        opacity: 1
+
 //WEBPAGE FONTS
 //Titles
 @mixin OhMyFood__title
@@ -176,6 +188,26 @@ body
         h2
             @include OhMyFood__title
             font-size: 28px
+        .heart
+            height: 22px
+            margin: 30px 15px 30px 0px
+            .hearty
+                opacity: 1
+            .colourheart
+                opacity: 0
+            &:hover
+                .hearty
+                    animation: emptiness 0.25s ease-out forwards
+                .colourheart
+                    animation: fullness 0.25s ease-in forwards
+            @media only screen and (min-width: 907.5px)
+                .hearty
+                    margin-right: -2px
+                    opacity: 1
+                .colourheart
+                    margin-left: -21px
+                    opacity: 0
+    
         .hearts
             display: inline-block
             width: 22px
