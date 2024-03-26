@@ -218,14 +218,14 @@ body
                 font-size: 16px
                 color: #000
                 height: 24px
-                align-content: top
+                vertical-align: top
 
             .line_below
                 width: 40px
                 height: 3px
                 background-color: #99E2D0
                 opacity: 1
-                align-content: bottom            
+                vertical-align: bottom            
 
         .dish
             position: relative
@@ -234,7 +234,7 @@ body
             border-radius: 15px
             background: #FFF
             box-shadow: 0px 4.011494159698486px 15.043103218078613px 0px #0000001A
-            align-content: left
+            align-content: flex-start
             padding: 15px
             @media only screen and (min-width: 907.5px)
                 width: 75%                                
@@ -330,14 +330,14 @@ footer
     color: #FFFFFF
     @media only screen and (min-width: 907.5px)
         height: 114px
-        padding: 30px, 25px, 30px, 25px
+        padding: 30px 25px 30px 25px
     .ft
         gap: 16px
         @media only screen and (min-width: 907.5px)
             display: flex
             flex-direction: row-reverse
             align-content: flex-start
-            justify-content: bottom 
+            vertical-align: bottom 
             gap: 16px
         a
             text-decoration: none
@@ -368,10 +368,10 @@ footer
                 color: #FFFFFF
                 .ft_icon
                     width: 25px
-                    align-items: left
+                    align-items: flex-start
                 p
                     @include roboto_500
-                    Line-height:18,75px
+                    Line-height:18.75px
                     width: 168px
                     height: 19px
                     left: 22px
@@ -379,5 +379,5 @@ footer
                     color: #FFFFFF
             p
                 @include roboto_400
-                Line-height: 18,75px
+                Line-height: 18.75px
                 color: #FFFFFF

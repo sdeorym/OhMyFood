@@ -226,14 +226,14 @@ body {
   font-size: 16px;
   color: #000;
   height: 24px;
-  align-content: top;
+  vertical-align: top;
 }
 .restaurant .courses .course_part .line_below {
   width: 40px;
   height: 3px;
   background-color: #99E2D0;
   opacity: 1;
-  align-content: bottom;
+  vertical-align: bottom;
 }
 .restaurant .courses .dish {
   position: relative;
@@ -242,7 +242,7 @@ body {
   border-radius: 15px;
   background: #FFF;
   box-shadow: 0px 4.0114941597px 15.0431032181px 0px rgba(0, 0, 0, 0.1019607843);
-  align-content: left;
+  align-content: flex-start;
   padding: 15px;
 }
 @media only screen and (min-width: 907.5px) {
@@ -374,7 +374,7 @@ footer {
 @media only screen and (min-width: 907.5px) {
   footer {
     height: 114px;
-    padding: 30px, 25px, 30px, 25px;
+    padding: 30px 25px 30px 25px;
   }
 }
 footer .ft {
@@ -385,7 +385,7 @@ footer .ft {
     display: flex;
     flex-direction: row-reverse;
     align-content: flex-start;
-    justify-content: bottom;
+    vertical-align: bottom;
     gap: 16px;
   }
 }
@@ -436,7 +436,7 @@ footer .ft .ft_menu .icon_plus_text {
 }
 footer .ft .ft_menu .icon_plus_text .ft_icon {
   width: 25px;
-  align-items: left;
+  align-items: flex-start;
 }
 footer .ft .ft_menu .icon_plus_text p {
   font-family: Roboto;
@@ -445,7 +445,7 @@ footer .ft .ft_menu .icon_plus_text p {
   margin: 0px;
   font-weight: 500;
   font-size: 16px;
-  Line-height: 18, 75px;
+  Line-height: 18.75px;
   width: 168px;
   height: 19px;
   left: 22px;
@@ -459,6 +459,6 @@ footer .ft .ft_menu p {
   margin: 0px;
   font-weight: 400;
   font-size: 16px;
-  Line-height: 18, 75px;
+  Line-height: 18.75px;
   color: #FFFFFF;
 }/*# sourceMappingURL=restostyles.css.map */
