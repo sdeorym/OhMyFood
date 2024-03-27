@@ -19,7 +19,7 @@ $whitey: #FFFFFF 15%
     color: #9356DC
     left: 20.51px
 
-.fa-mobile-screen-tton, .fa-list-ul
+.fa-mobile-screen-button, .fa-list-ul
     color: #7E7E7E
 
 //WEBPAGE FONTS
@@ -319,6 +319,7 @@ nav
         color: #F6F6F6        
         gap: 27px
         align-items: center
+        width: 89.33%
 
         .step
             position: absolute
@@ -354,6 +355,9 @@ nav
             gap: 27px
             justify-content: flex-start
             flex-shrink: 0
+            i
+                visibility: visible
+                display: inline
             h3
                 @include roboto_500
                 line-height: 19px
@@ -428,10 +432,13 @@ nav
                 
                 .heart
                     height: 22px
+                    margin: 0px 11px 0px 11px                    
                     .hearty
                         opacity: 1
+                        margin-right: -22px
                     .colourheart
                         opacity: 0
+                        padding-right: 0px
                     &:hover
                         .hearty
                             animation: emptiness 0.25s ease-out forwards

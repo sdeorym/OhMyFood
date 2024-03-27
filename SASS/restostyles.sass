@@ -190,11 +190,13 @@ body
             font-size: 28px
         .heart
             height: 22px
-            margin: 30px 15px 30px 0px
+            margin: 30px 11px 30px 11px
             .hearty
                 opacity: 1
+                margin-right: -22px
             .colourheart
                 opacity: 0
+                padding-right: 0px
             &:hover
                 .hearty
                     animation: emptiness 0.25s ease-out forwards
@@ -303,11 +305,15 @@ body
                 align-items: center
                  
             &:hover //Animation on hover
-                width: calc(100% - 82px)
+                width: calc(100% - 70px)                
                 @media only screen and (min-width: 907.5px)
                     width: calc(75% - 60px)
                     border-top-right-radius: 0px
                     border-bottom-right-radius: 0px
+                &:hover .dishpecifications
+                    padding-right: 15px
+                    @media only screen and (min-width: 907.5px)
+                        padding-right: 0px    
                 &:hover .tick   
                     opacity: 1
                     top: 0%

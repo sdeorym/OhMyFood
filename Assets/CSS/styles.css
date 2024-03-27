@@ -16,7 +16,7 @@
   left: 20.51px;
 }
 
-.fa-mobile-screen-tton, .fa-list-ul {
+.fa-mobile-screen-button, .fa-list-ul {
   color: #7E7E7E;
 }
 
@@ -352,6 +352,7 @@ nav .location .location_city {
   color: #F6F6F6;
   gap: 27px;
   align-items: center;
+  width: 89.33%;
 }
 .how_it_works .procedure-box .step {
   position: absolute;
@@ -388,6 +389,10 @@ nav .location .location_city {
   gap: 27px;
   justify-content: flex-start;
   flex-shrink: 0;
+}
+.how_it_works .procedure-box .clipped-box i {
+  visibility: visible;
+  display: inline;
 }
 .how_it_works .procedure-box .clipped-box h3 {
   font-family: Roboto;
@@ -507,12 +512,15 @@ nav .location .location_city {
 }
 .restaurants .resto_pack .card_rest .restaurant_frame .heart {
   height: 22px;
+  margin: 0px 11px 0px 11px;
 }
 .restaurants .resto_pack .card_rest .restaurant_frame .heart .hearty {
   opacity: 1;
+  margin-right: -22px;
 }
 .restaurants .resto_pack .card_rest .restaurant_frame .heart .colourheart {
   opacity: 0;
+  padding-right: 0px;
 }
 .restaurants .resto_pack .card_rest .restaurant_frame .heart:hover .hearty {
   animation: emptiness 0.25s ease-out forwards;

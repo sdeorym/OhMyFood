@@ -187,13 +187,15 @@ body {
 }
 .restaurant .rest_bar .heart {
   height: 22px;
-  margin: 30px 15px 30px 0px;
+  margin: 30px 11px 30px 11px;
 }
 .restaurant .rest_bar .heart .hearty {
   opacity: 1;
+  margin-right: -22px;
 }
 .restaurant .rest_bar .heart .colourheart {
   opacity: 0;
+  padding-right: 0px;
 }
 .restaurant .rest_bar .heart:hover .hearty {
   animation: emptiness 0.25s ease-out forwards;
@@ -342,13 +344,21 @@ body {
   align-items: center;
 }
 .restaurant .courses .dish:hover {
-  width: calc(100% - 82px);
+  width: calc(100% - 70px);
 }
 @media only screen and (min-width: 907.5px) {
   .restaurant .courses .dish:hover {
     width: calc(75% - 60px);
     border-top-right-radius: 0px;
     border-bottom-right-radius: 0px;
+  }
+}
+.restaurant .courses .dish:hover:hover .dishpecifications {
+  padding-right: 15px;
+}
+@media only screen and (min-width: 907.5px) {
+  .restaurant .courses .dish:hover:hover .dishpecifications {
+    padding-right: 0px;
   }
 }
 .restaurant .courses .dish:hover:hover .tick {
