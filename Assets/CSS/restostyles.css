@@ -40,11 +40,6 @@ body {
   width: 100%;
   margin: 0px;
 }
-@media only screen and (min-width: 907.5px) {
-  body {
-    max-width: 1440px;
-  }
-}
 
 .main-container {
   box-sizing: border-box;
@@ -240,7 +235,7 @@ body {
   box-sizing: content-box;
   width: 93.07%;
   justify-content: center;
-  margin: 40px 20px 0px 15px;
+  margin: 40px 15px 0px 15px;
   gap: 12px;
 }
 @media only screen and (min-width: 907.5px) {
@@ -387,6 +382,7 @@ body {
   width: 100%;
 }
 .restaurant .press_button .button__commande {
+  border: none;
   font-family: Roboto;
   font-size: 15px;
   letter-spacing: 0em;
@@ -413,7 +409,6 @@ body {
 .restaurant .press_button .button__commande:hover {
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.3490196078);
   background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
-  border: none;
 }
 
 footer {

@@ -44,8 +44,7 @@ body {
 }
 @media only screen and (min-width: 907.5px) {
   body {
-    max-width: 1440px;
-    height: 1395px;
+    width: 100%;
     gap: 30px;
   }
 }
@@ -149,6 +148,7 @@ nav {
 }
 @media only screen and (min-width: 907.5px) {
   nav {
+    width: 100%;
     height: 146px;
   }
 }
@@ -159,6 +159,9 @@ nav .nav_title {
   top: 14px;
 }
 nav .nav_title h1 {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   font-family: Shrikhand;
   font-size: 30px;
   font-style: italic;
@@ -269,6 +272,7 @@ nav .location .location_city {
   margin: 0px 26px 0px 34px;
 }
 .reservation .button__homepage {
+  border: none;
   font-family: Roboto;
   font-size: 15px;
   letter-spacing: 0em;
@@ -290,7 +294,6 @@ nav .location .location_city {
 .reservation .button__homepage:hover {
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.3490196078);
   background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
-  border: none;
 }
 
 .how_it_works {
@@ -298,8 +301,7 @@ nav .location .location_city {
   height: 440px;
   top: 400px;
   background-color: #FFF;
-  padding-right: 20px;
-  padding-left: 20px;
+  padding: 0px 20px 0px 20px;
   gap: 26px;
   box-sizing: border-box;
   justify-content: flex-start;
@@ -325,34 +327,45 @@ nav .location .location_city {
 .how_it_works .procedure {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-evenly;
   width: 100%;
-  height: 268px;
-  gap: 25px;
+  height: 267.02px;
+  gap: 24.92px;
+  margin: 0% 5.34% 0% 5.34%;
+  bottom: 68px;
 }
 @media only screen and (min-width: 907.5px) {
   .how_it_works {
-    height: 228.38px;
+    width: 100%;
     align-items: center;
+    height: 228.38px;
+    gap: 25px;
+    padding: 0%;
   }
   .how_it_works .procedure {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
     width: 73.12%;
     height: 72.38px;
+    gap: 2.22%;
     gap: 24px;
   }
 }
 .how_it_works .procedure-box {
   position: relative;
   color: #FFF;
-  height: 72.4px;
+  height: 72.38px;
   border-radius: 20px;
   color: #F6F6F6;
-  gap: 27px;
   align-items: center;
-  width: 89.33%;
+  width: 87.59%;
+}
+@media only screen and (min-width: 907.5px) {
+  .how_it_works .procedure-box {
+    width: 29%;
+  }
 }
 .how_it_works .procedure-box .step {
   position: absolute;
@@ -374,7 +387,12 @@ nav .location .location_city {
   border-color: #9356DC;
   background-color: #9356DC;
   text-align: center;
-  left: -12px;
+  left: -18px;
+}
+@media only screen and (min-width: 907.5px) {
+  .how_it_works .procedure-box .step {
+    left: -12px;
+  }
 }
 .how_it_works .procedure-box .clipped-box {
   padding-left: 30px;
@@ -408,7 +426,7 @@ nav .location .location_city {
 }
 @media only screen and (min-width: 907.5px) {
   .how_it_works .procedure-box .clipped-box h3 {
-    width: 211px;
+    width: 100%;
   }
 }
 
@@ -420,9 +438,9 @@ nav .location .location_city {
 }
 @media only screen and (min-width: 907.5px) {
   .restaurants {
-    height: 668px;
-    gap: 28px;
+    height: 698px;
     align-items: center;
+    gap: 50px;
   }
 }
 .restaurants a {
@@ -447,6 +465,11 @@ nav .location .location_city {
     margin-right: 54%;
   }
 }
+@media only screen and (min-width: 907.5px) {
+  .restaurants h2 {
+    margin-bottom: -22px;
+  }
+}
 .restaurants .resto_pack {
   margin: 0px 17.5px 0px 17.5px;
   gap: 18px;
@@ -456,9 +479,10 @@ nav .location .location_city {
     justify-content: center;
     display: flex;
     flex-direction: row;
-    width: 100%;
+    width: 75%;
     height: 251px;
-    gap: 50px;
+    gap: 100px;
+    margin: 0px 12.5% 0px 12.5%;
   }
 }
 .restaurants .resto_pack .card_rest {
@@ -469,25 +493,22 @@ nav .location .location_city {
 }
 @media only screen and (min-width: 907.5px) {
   .restaurants .resto_pack .card_rest {
-    width: 490px;
+    width: 45.37%;
   }
 }
 .restaurants .resto_pack .card_rest .newbie_box {
-  width: 80px;
-  height: 29px;
+  position: relative;
   border-radius: 2px;
   background-color: #99e2d0;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1490196078);
-  position: relative;
   top: 10px;
-  left: 70%;
+  right: calc(-100% + 95px);
   border: #99E2D0;
 }
 .restaurants .resto_pack .card_rest .newbie_box .newbie_text {
-  width: 61.37px;
   height: 16px;
-  top: 7px;
-  left: 9px;
+  flex-shrink: 0;
+  width: 61.37px;
   font-family: Roboto;
   font-size: 15px;
   letter-spacing: 0em;
@@ -499,7 +520,7 @@ nav .location .location_city {
   text-align: center;
   color: #008766;
   position: absolute;
-  padding: 6.5px;
+  padding: 7px 9.63px 6px 9px;
   background-color: #99e2d0;
   border-radius: 2px;
   border-color: #99E2D0;
@@ -537,35 +558,6 @@ nav .location .location_city {
     margin-left: -21px;
     opacity: 0;
   }
-}
-.restaurants .resto_pack .card_rest .restaurant_frame .hearts {
-  width: 25px;
-  height: 25px;
-  border: 0px #FFF;
-  background: #FFF;
-}
-.restaurants .resto_pack .card_rest .restaurant_frame .hearts .control-me::after {
-  content: url("../images/icons/empty_like.png");
-}
-.restaurants .resto_pack .card_rest .restaurant_frame .hearts #toggle1:checked ~ .control-me::after {
-  content: url("../images/icons/full_like.png");
-}
-.restaurants .resto_pack .card_rest .restaurant_frame .hearts #toggle2:checked ~ .control-me::after {
-  content: url("../images/icons/full_like.png");
-}
-.restaurants .resto_pack .card_rest .restaurant_frame .hearts #toggle3:checked ~ .control-me::after {
-  content: url("../images/icons/full_like.png");
-}
-.restaurants .resto_pack .card_rest .restaurant_frame .hearts #toggle4:checked ~ .control-me::after {
-  content: url("../images/icons/full_like.png");
-}
-.restaurants .resto_pack .card_rest .restaurant_frame .hearts label {
-  padding: 0px;
-}
-.restaurants .resto_pack .card_rest .restaurant_frame .hearts .visually-hidden {
-  position: absolute;
-  left: -100vw;
-  opacity: 0;
 }
 .restaurants .resto_pack .card_rest .restaurant_frame .restaurant-data {
   gap: 7.5px;
