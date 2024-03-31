@@ -36,6 +36,16 @@
     opacity: 1;
   }
 }
+@keyframes rogue-one {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
 body {
   width: 100%;
   margin: 0px;
@@ -144,16 +154,6 @@ body {
 .restaurant .local_menu .course3 {
   animation: rogue-one 2s ease-in 4s forwards;
   opacity: 0;
-}
-@keyframes rogue-one {
-  from {
-    transform: translateX(100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0%);
-    opacity: 1;
-  }
 }
 .restaurant .rest_bar {
   box-sizing: content-box;

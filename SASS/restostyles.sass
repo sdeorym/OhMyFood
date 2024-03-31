@@ -6,29 +6,6 @@
   display: flex
   flex-direction: row
 
-@keyframes flyoverzone
-    from 
-        transform: translateX(100%)
-        opacity: 0
-        background-color: rgba(153, 226, 208, 0)
-    to 
-        transform: translateX(0%)
-        opacity: 1
-        background-color: rgba(153, 226, 208, 1)
-
-
-@keyframes emptiness
-    from 
-        opacity: 1
-    to 
-        opacity: 0
-
-@keyframes fullness
-    from 
-        opacity: 0
-    to 
-        opacity: 1
-
 //WEBPAGE FONTS
 //Titles
 @mixin OhMyFood__title
@@ -79,6 +56,39 @@
 @mixin dish_features
     @include dish_title_width
     @include dishpecifications_width
+
+
+//ANIMATIONS & KEYFRAMES
+
+@keyframes flyoverzone
+    from 
+        transform: translateX(100%)
+        opacity: 0
+        background-color: rgba(153, 226, 208, 0)
+    to 
+        transform: translateX(0%)
+        opacity: 1
+        background-color: rgba(153, 226, 208, 1)
+
+@keyframes emptiness
+    from 
+        opacity: 1
+    to 
+        opacity: 0
+
+@keyframes fullness
+    from 
+        opacity: 0
+    to 
+        opacity: 1
+
+@keyframes rogue-one 
+    from 
+        transform: translateX(100%)
+        opacity: 0
+    to 
+        transform: translateX(0%)
+        opacity: 1
 
 // Here starts the web
 body
@@ -162,15 +172,7 @@ body
         .course3 
             animation: rogue-one 2s ease-in 4s forwards
             opacity: 0
-
-            @keyframes rogue-one 
-                from 
-                    transform: translateX(100%)
-                    opacity: 0
-                to 
-                    transform: translateX(0%)
-                    opacity: 1
-
+            
     .rest_bar  //Name of the restaurant and heart to be marked
         box-sizing: content-box
         align-content: center

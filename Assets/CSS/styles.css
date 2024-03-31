@@ -36,6 +36,42 @@
     opacity: 1;
   }
 }
+@keyframes opaque {
+  0% {
+    background-color: #353535;
+    outline: solid 5px #353535;
+    opacity: 1;
+  }
+  25% {
+    background-color: #353535;
+    outline: solid 5px #353535;
+    opacity: 0.75;
+  }
+  50% {
+    background-color: #9356DC;
+    outline: solid 5px #9356DC;
+    opacity: 0.5;
+  }
+  75% {
+    background-color: #FF79DA;
+    outline: solid 5px #FF79DA;
+    opacity: 0.25;
+  }
+  100% {
+    background-color: #FFF;
+    outline: solid 5px #FFF;
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@keyframes ohmy {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 body {
   width: 100%;
   padding: 0px;
@@ -95,42 +131,6 @@ body .ohmyfoodloader {
 @media only screen and (min-width: 907.5px) {
   body .ohmyfoodloader {
     padding: 30px 5px 5px 20px;
-  }
-}
-@keyframes opaque {
-  0% {
-    background-color: #353535;
-    outline: solid 5px #353535;
-    opacity: 1;
-  }
-  25% {
-    background-color: #353535;
-    outline: solid 5px #353535;
-    opacity: 0.75;
-  }
-  50% {
-    background-color: #9356DC;
-    outline: solid 5px #9356DC;
-    opacity: 0.5;
-  }
-  75% {
-    background-color: #FF79DA;
-    outline: solid 5px #FF79DA;
-    opacity: 0.25;
-  }
-  100% {
-    background-color: #FFF;
-    outline: solid 5px #FFF;
-    opacity: 0;
-    visibility: hidden;
-  }
-}
-@keyframes ohmy {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
   }
 }
 body .main_container {

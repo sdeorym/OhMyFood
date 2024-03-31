@@ -85,6 +85,34 @@ $whitey: #FFFFFF 15%
     to 
         opacity: 1
 
+@keyframes opaque
+    0%
+        background-color: #353535
+        outline: solid 5px #353535
+        opacity: 1
+    25%
+        background-color: #353535
+        outline: solid 5px #353535
+        opacity: .75
+    50%
+        background-color: #9356DC
+        outline: solid 5px #9356DC
+        opacity: .5
+    75%
+        background-color: #FF79DA
+        outline: solid 5px #FF79DA
+        opacity: .25                
+    100%
+        background-color: #FFF
+        outline: solid 5px #FFF
+        opacity: 0
+        visibility: hidden
+    
+@keyframes ohmy
+    0%
+        opacity: 0
+    100%
+        opacity: 1
 
 // Here starts the web
 body
@@ -135,35 +163,6 @@ body
         @media only screen and (min-width: 907.5px)
             padding: 30px 5px 5px 20px
     
-        @keyframes opaque
-            0%
-                background-color: #353535
-                outline: solid 5px #353535
-                opacity: 1
-            25%
-                background-color: #353535
-                outline: solid 5px #353535
-                opacity: .75
-            50%
-                background-color: #9356DC
-                outline: solid 5px #9356DC
-                opacity: .5
-            75%
-                background-color: #FF79DA
-                outline: solid 5px #FF79DA
-                opacity: .25                
-            100%
-                background-color: #FFF
-                outline: solid 5px #FFF
-                opacity: 0
-                visibility: hidden
-
-            
-        @keyframes ohmy
-            0%
-                opacity: 0
-            100%
-                opacity: 1
 
     .main_container
         margin-top: 0px
